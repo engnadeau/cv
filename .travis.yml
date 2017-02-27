@@ -12,4 +12,6 @@ deploy:
     secure: pq40AxXNMRkpOfiE5avjTyQkrIMV18Zm/50AaA3rN9sCBmXQ9R1i4qwzUKth1J1tEUGJwtROY9No3Dl9ffndIn3W/Fcs0U/cdSOCnYyko3gV6rqS7Zc8Vesai4bNCi4Qb1Pd3eacxU8rOzepljNspRVuPRjI1lyVC2BCLcuBA1uktHroVPioj+QzgnqZaBRXckjIKeghUwCNsxQAF1y9mGs+9cvKiQlE+Or1uJfeUiYb+/cfrePoav6sNcCGHyyQGr0AETHO5Shk0IP5A4tJLxniVSdMsWHeX/jvN6NzOEK/Nqq//ohzKBiECtTLOCeFodklaLrgMvZzh6PWr70EFAhjdaC9Y/FeDO23YscHpDN50J3Bix9FMfAIvuVc44YjiC8roL3It4KyZP3Z+obATf9Cf2N5sWPT9dOscDZs1xjKvjCqUfAjG9saJ51ebzDHk9KfJBq1b/g+G4Ib+aV8zn1SRqyjJE1FAN+HXMbzr7VC6FZsjfjWwlh/H6MvJvIWzfUsAh3rqhoMzmwGG2Ft3W4v2B7ofnQHNk3topXTttxIV7FPJGXvvzwKhBdZEqHo1CD6mbnJizBw2ixDPTKrwu+/48m6c/Ys3dgpH8aw7CmvOQm/C6NMtfTRZsd2di0aY7Vg4m8fuIdPHOomGK4vW9rF5h7Ozrvy+bQM+adPMZc=
   file: resume.html
   on:
+    tags: true
+    branch: master
     repo: nnadeau/cv
