@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Nicholas Nadeau",
-    "label": "Engineer",
+    "label": "Junior Engineer, Associate Value Specialist (AVS)",
     "picture": "",
     "email": "nicholas.nadeau@gmail.com",
     "phone": "+1-514-573-5620",
@@ -42,7 +42,7 @@
       "company": "Rogue Research Inc.",
       "position": "Mechanical Designer / Robotics Specialist",
       "website": "https://www.rogue-research.com",
-      "startDate": "2011-05-01",
+      "startDate": "2011",
       "summary": "Responsible for mechanical research, design, and development of brain imaging and robotic products.",
       "highlights": [
         "Veterinary micro-surgical robot",
@@ -55,8 +55,8 @@
       "company": "Micro and NanoBioengineering Lab",
       "position": "Mechanical Designer / Researcher",
       "website": "http://dj.lab.mcgill.ca",
-      "startDate": "2013-09-15",
-      "endDate": "2014-08-12",
+      "startDate": "2013-09",
+      "endDate": "2014-08",
       "summary": "Led the design of a prototype electricity-free polymerase chain reaction (PCR) system for low-resource settings (e.g., Africa)."
     }
   ],
