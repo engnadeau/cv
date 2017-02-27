@@ -1,0 +1,231 @@
+{
+  "basics": {
+    "name": "Nicholas Nadeau",
+    "label": "Junior Engineer, Associate Value Specialist (AVS)",
+    "picture": "",
+    "email": "nicholas.nadeau@gmail.com",
+    "phone": "+1-514-573-5620",
+    "website": "http://nicholasnadeau.me",
+    "summary": "Hello, I'm Nicholas.",
+    "location": {
+      "address": "519-1010 rue William",
+      "postalCode": "H3C 0K8",
+      "city": "Montréal",
+      "countryCode": "CA",
+      "region": "Québec"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "EngNadeau",
+        "url": "https://twitter.com/engnadeau"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Nicholas Nadeau",
+        "url": "https://www.linkedin.com/in/nicholas-nadeau-02092832"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "Nicholas Nadeau",
+        "url": "https://scholar.google.ca/citations?user=Soo4zroAAAAJ&hl=en"
+      },
+      {
+        "network": "GitHub",
+        "username": "nnadeau",
+        "url": "https://github.com/nnadeau"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Rogue Research Inc.",
+      "position": "Mechanical Designer / Robotics Specialist",
+      "website": "https://www.rogue-research.com",
+      "startDate": "2011",
+      "summary": "Responsible for mechanical research, design, and development of brain imaging and robotic products.",
+      "highlights": [
+        "Veterinary micro-surgical robot",
+        "Controllable Transcranial Magnetic Stimulation (cTMS)",
+        "Near Infrared Spectroscopy (NIRS)",
+        "Deep Brain Stimulation (DBS)"
+      ]
+    },
+    {
+      "company": "Micro and NanoBioengineering Lab",
+      "position": "Mechanical Designer / Researcher",
+      "website": "http://dj.lab.mcgill.ca",
+      "startDate": "2013-09",
+      "endDate": "2014-08",
+      "summary": "Led the design of a prototype electricity-free polymerase chain reaction (PCR) system for low-resource settings (e.g., Africa)."
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Interaction du quartier Peter-McGill",
+      "position": "Communications Administrator",
+      "website": "http://petermcgill.org",
+      "startDate": "2014",
+      "endDate": "2013"
+    },
+    {
+      "organization": "McGill University",
+      "position": "Discover McGill and Orientation Week Leader",
+      "startDate": "2014",
+      "endDate": "2011"
+    },
+    {
+      "organization": "Forum Jeunesse Centre-ville",
+      "position": "Treasurer and Communications Administrator",
+      "startDate": "2013",
+      "endDate": "2012"
+    },
+    {
+      "organization": "Innovation Jeunes",
+      "position": "Volunteer Math and Science Teacher",
+      "website": "http://www.innovationjeunes.com",
+      "startDate": "2011",
+      "endDate": "2009"
+    }
+  ],
+  "education": [
+    {
+      "institution": "École de technologie supérieure",
+      "area": "Precision Robotics",
+      "studyType": "Doctorate",
+      "startDate": "2014",
+      "gpa": "4.30/4.30"
+    },
+    {
+      "institution": "McGill University",
+      "area": "Mechanical Engineering, Biomedical Engineering Minor",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2010",
+      "endDate": "2014",
+      "gpa": "3.79/4.00"
+    },
+    {
+      "institution": "Dawson College",
+      "area": "Honours Health Science",
+      "studyType": "DEC",
+      "startDate": "2008",
+      "endDate": "2010"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Alexander Graham Bell Canada Graduate Scholarship",
+      "date": "2015",
+      "awarder": "NSERC"
+    },
+    {
+      "title": "Mitacs Accelerate Industrial Research Grant",
+      "date": "2014",
+      "awarder": "Mitacs"
+    },
+    {
+      "title": "Graduation Honours",
+      "date": "2014",
+      "awarder": "McGill University"
+    },
+    {
+      "title": "Québec Iron Titanium Scholarship",
+      "date": "2013",
+      "awarder": "McGill University"
+    },
+    {
+      "title": "Abe and Jennie Brock Award",
+      "date": "2013",
+      "awarder": "McGill University"
+    },
+    {
+      "title": "Dean's Honour List (Top 10% of Faculty of Engineering)",
+      "date": "2013",
+      "awarder": "McGill University"
+    },
+    {
+      "title": "Industrial Undergraduate Research Award",
+      "date": "2013",
+      "awarder": "NSERC"
+    },
+    {
+      "title": "Industrial Undergraduate Research Award",
+      "date": "2012",
+      "awarder": "NSERC"
+    },
+    {
+      "title": "Industrial Undergraduate Research Award",
+      "date": "2011",
+      "awarder": "NSERC"
+    },
+    {
+      "title": "Golden Key International Honour Society",
+      "date": "2011",
+      "awarder": "McGill University"
+    },
+    {
+      "title": "First Class Graduation Honours",
+      "date": "2010",
+      "awarder": "Dawson College"
+    },
+    {
+      "title": "Athletic Academic Achievement Award",
+      "date": "2010",
+      "awarder": "Dawson College"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": [
+        "Python",
+        "Java",
+        "C/C++",
+        "OpenCV"
+      ]
+    },
+    {
+      "name": "Specialty Software",
+      "keywords": [
+        "SOLIDWORKS",
+        "Inventor",
+        "Photoshop",
+        "Illustrator"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "keywords": [
+        "Robotics",
+        "Biomedical",
+        "Prototyping",
+        "Product Design"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "French",
+      "fluency": "Native"
+    }
+  ],
+  "projects": [
+    {
+      "name": "MUSE 1.0",
+      "description": "Bedside Ultrasound Course for Primary Care Clinicians",
+      "startDate": "2017-01",
+      "roles": "Participant",
+      "entity": "Steinberg Centre for Simulation and Interactive Learning"
+    },
+    {
+      "name": "Exhibition Summit",
+      "startDate": "2016-12",
+      "roles": "Guest Speaker",
+      "entity": "Clearpoint Elementary"
+    }
+  ]
+}
