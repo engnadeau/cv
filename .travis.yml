@@ -1,0 +1,7 @@
+language: node
+
+install:
+  - npm install -g resume-cli
+
+script:
+  - resume export resume.html
