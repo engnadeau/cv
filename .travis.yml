@@ -1,8 +1,10 @@
-language: node
+language: node_js
+node_js:
+  - "node"
 install:
-- npm install -g resume-cli
+  - npm install -g resume-cli
 script:
-- resume export resume.html
+  - resume export resume.html
 deploy:
   provider: releases
   api_key:
