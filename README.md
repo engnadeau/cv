@@ -13,3 +13,6 @@ Personal CV
 
 ### Local Publishing
 `resume serve`
+
+### Building
+`resume export docs/index.html`
