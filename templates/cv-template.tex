@@ -1,0 +1,35 @@
+\documentclass[11pt, letterpaper]{awesome-cv/awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[awesome-cv/fonts/]
+\definecolor{awesome}{HTML}{414141}
+
+\name{\V{resume.first_name}}{\V{resume.last_name}}
+\address{\V{resume.address}}
+\mobile{\V{resume.phone}}
+\email{\V{resume.email}}
+\homepage{\V{resume.site}}
+\github{\V{resume.github}}
+\linkedin{\V{resume.linkedin}}
+\position{\V{resume.label}}
+
+\makecvfooter{\today}{\V{resume.first_name} \V{resume.last_name}}{\thepage}
+
+\begin{document}
+\makecvheader
+
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {B.S. in Computer Science and Engineering}
+    {POSTECH(Pohang University of Science and Technology)}
+    {Pohang, S.Korea}
+    {Mar. 2010 - PRESENT}
+    {
+      \begin{cvitems}
+        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+
+\end{document}
