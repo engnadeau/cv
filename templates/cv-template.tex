@@ -107,26 +107,26 @@
 \cvsection{Skills}
 \B{set size = resume.skills|length -}
 \begin{multicols}{\V{size}}
-\begin{itemize}
-\B{for e in resume.skills -}
+  \begin{itemize}
+    \B{for e in resume.skills -}
     \B{for s in e['keywords'] -}
     \item {\V{s}}
     \B{endfor -}
     \B{endfor -}
-    \end{itemize}
+  \end{itemize}
 \end{multicols}
 
 \cvsection{Certifications}
 \begin{description}
-    \B{for e in resume.certifications -}
+  \B{for e in resume.certifications -}
   \item[\V{e['name']}] \V{e['entity']}
-    \B{endfor -}
+  \B{endfor -}
 \end{description}
 
 \cvsection{Languages}
 \begin{description}
-    \B{for e in resume.languages -}
+  \B{for e in resume.languages -}
   \item[\V{e['language']}] \V{e['fluency']}
-    \B{endfor -}
+  \B{endfor -}
 \end{description}
 \end{document}
