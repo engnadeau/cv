@@ -1,18 +1,12 @@
 [![Build Status](https://travis-ci.org/nnadeau/cv.svg?branch=master)](https://travis-ci.org/nnadeau/cv)
+[![GitHub release](https://img.shields.io/github/release/nnadeau/cv.svg)](https://github.com/nnadeau/cv/releases/latest)
 
 # CV
-Personal CV
+My personal CV; get the latest version [here](https://github.com/nnadeau/cv/releases/latest)
 
-## Getting Started
-
-### Install
-`npm install -g resume-cli`
-
-### Testing
-`resume test`
-
-### Local Publishing
-`resume serve`
-
-### Building
-`resume export docs/index.html`
+## Motivation
+- I like systematic designs.
+- (JSON Resume)[https://github.com/jsonresume/] is awesome.
+    - But its development has slowed down.
+- Jinja2 learning experience.
+- Using Python makes me happy.
