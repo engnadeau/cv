@@ -29,7 +29,8 @@ def run():
     template = load_jinja_template(os.path.join(template_path, 'cv-template.tex'))
 
     with open(os.path.join(root_path, 'cv.tex'), 'w') as f:
-        f.write(template.render(resume=resume))
+        out = template.render(resume=resume)
+        f.write(out)
 
 
 if __name__ == '__main__':

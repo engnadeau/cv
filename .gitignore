@@ -296,3 +296,4 @@ ENV/
 # Rope project settings
 .ropeproject
 
+*.pdf
