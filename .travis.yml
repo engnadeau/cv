@@ -1,16 +1,17 @@
 language: python
+python: 3.6
 
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive
-  - python -V
 
 install:
-  - python convert_json_to_tex.py
-  - xelatex cv.tex
+  - python -V
+  - pip install jinja2
 
 script:
-  - resume export resume.html
+  - python convert_json_to_tex.py
+  - xelatex cv.tex
 
 after_script:
   - find . -type f
