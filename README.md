@@ -8,5 +8,5 @@ My personal CV; get the latest version [here](https://github.com/nnadeau/cv/rele
 - I like systematic designs.
 - [JSON Resume](https://github.com/jsonresume/) is awesome.
     - But its development has slowed down.
-- Jinja2 learning experience.
-- Using Python makes me happy.
+- [Jinja2](http://jinja.pocoo.org/) learning experience.
+- Using [Python](https://www.python.org/) makes me happy.
