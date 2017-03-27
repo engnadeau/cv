@@ -6,7 +6,7 @@ My personal CV; get the latest version [here](https://github.com/nnadeau/cv/rele
 
 ## Motivation
 - I like systematic designs.
-- (JSON Resume)[https://github.com/jsonresume/] is awesome.
+- [JSON Resume](https://github.com/jsonresume/) is awesome.
     - But its development has slowed down.
 - Jinja2 learning experience.
 - Using Python makes me happy.
