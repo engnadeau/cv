@@ -4,8 +4,9 @@ python: 3.6
 before_install:
   - sudo apt-get -qq update
   - travis_wait sudo apt-get install -y texlive-full
-  - travis_wait sudo apt-get install -y texlive-math-extra
+  - sudo apt-get install -y texlive-math-extra
   - sudo apt-get install -y texlive-xetex
+  - tlmgr install unicode-math
 
 install:
   - python -V
