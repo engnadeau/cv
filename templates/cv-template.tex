@@ -1,0 +1,132 @@
+\documentclass[11pt, letterpaper]{awesome-cv}
+\usepackage{multicol}   % multicolumn list
+\usepackage{enumitem}   % list spacing
+\setlist{nosep} % list spacing
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+\definecolor{awesome}{HTML}{414141}
+
+\name{\V{resume.first_name}}{\V{resume.last_name}}
+\address{\V{resume.address}}
+\mobile{\V{resume.phone}}
+\email{\V{resume.email}}
+\homepage{\V{resume.site}}
+\github{\V{resume.github}}
+\linkedin{\V{resume.linkedin}}
+\position{\V{resume.label}}
+
+\makecvfooter{\today}{\V{resume.first_name} \V{resume.last_name}}{\thepage}
+
+\begin{document}
+\makecvheader
+
+\cvsection{Education}
+\begin{cventries}
+  \B{for e in resume.education -}
+  \cventry
+  {\V{e['area']}}
+  {\V{e['institution']}}
+  {\V{e['location']}}
+  {\V{e['startDate']} - \V{e['endDate']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Work}
+\begin{cventries}
+  \B{for e in resume.work -}
+  \cventry
+  {\V{e['position']}}
+  {\V{e['company']}}
+  {\V{e['location']}}
+  {\V{e['startDate']} - \V{e['endDate']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Volunteer}
+\begin{cventries}
+  \B{for e in resume.volunteer -}
+  \cventry
+  {\V{e['position']}}
+  {\V{e['organization']}}
+  {\V{e['location']}}
+  {\V{e['startDate']} - \V{e['endDate']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Presentations}
+\begin{cventries}
+  \B{for e in resume.presentations -}
+  \cventry
+  {\V{e['roles']}, \V{e['name']}}
+  {\V{e['entity']}}
+  {\V{e['location']}}
+  {\V{e['startDate']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Workshops}
+\begin{cventries}
+  \B{for e in resume.workshops -}
+  \cventry
+  {\V{e['roles']}, \V{e['entity']}}
+  {\V{e['name']}}
+  {\V{e['location']}}
+  {\V{e['startDate']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Projects}
+\begin{cventries}
+  \B{for e in resume.projects -}
+  \cventry
+  {\V{e['roles']}, \V{e['entity']}}
+  {\V{e['name']}}
+  {\V{e['location']}}
+  {\V{e['startDate']} - \V{e['endDate']}}
+  {\V{e['summary']}}
+  \B{endfor -}
+\end{cventries}
+
+\cvsection{Honors \& Awards}
+\begin{cvhonors}
+  \B{for e in resume.awards -}
+  \cvhonor
+  {\V{e['title']}}
+  {\V{e['awarder']}}
+  {}
+  {\V{e['date']}}
+  {}
+  \B{endfor -}
+\end{cvhonors}
+
+\cvsection{Skills}
+\B{set size = resume.skills|length -}
+\begin{multicols}{\V{size}}
+  \begin{itemize}
+    \B{for e in resume.skills -}
+    \B{for s in e['keywords'] -}
+    \item {\V{s}}
+    \B{endfor -}
+    \B{endfor -}
+  \end{itemize}
+\end{multicols}
+
+\cvsection{Certifications}
+\begin{description}
+  \B{for e in resume.certifications -}
+  \item[\V{e['name']}] \V{e['entity']}
+  \B{endfor -}
+\end{description}
+
+\cvsection{Languages}
+\begin{description}
+  \B{for e in resume.languages -}
+  \item[\V{e['language']}] \V{e['fluency']}
+  \B{endfor -}
+\end{description}
+\end{document}
