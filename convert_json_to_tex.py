@@ -27,7 +27,7 @@ def run():
     template_path = os.path.join(root_path, 'templates')
     template = load_jinja_template(os.path.join(template_path, 'cv-template.tex'))
 
-    with open(os.path.join(root_path, 'cv.tex'), 'w') as f:
+    with open(os.path.join(root_path, 'nnadeau-cv.tex'), 'w') as f:
         out = template.render(resume=resume)
         f.write(out)
 
