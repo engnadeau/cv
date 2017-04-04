@@ -2,7 +2,7 @@
 [![GitHub release](https://img.shields.io/github/release/nnadeau/cv.svg)](https://github.com/nnadeau/cv/releases/latest)
 
 # CV
-My personal CV; get the latest version [here](https://github.com/nnadeau/cv/releases/latest)
+My personal CV; get the latest version [here](https://github.com/nnadeau/cv/releases/latest) or see it rendered [here](http://nicholasnadeau.me/cv/)
 
 ## Motivation
 - I like systematic designs.
