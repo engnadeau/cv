@@ -13,7 +13,6 @@ My personal CV; get the latest version [here](https://github.com/nnadeau/cv/rele
 
 ## Tips and Tricks
 - Run a job description through a word cloud generator to extract keywords
-- 
 
 ## Resources
 - http://www.careerbuilder.com/advice/resumewriting-101-sample-resumes-included
