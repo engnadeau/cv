@@ -172,6 +172,26 @@
     </div>
 </div>
 
+<div class="section publications" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Publications</h2>
+        </div>
+        {% for e in cv['publications'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['name']}}</h5>
+                <p>{{e['authors']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['organization']}}</p>
+                <p>{{e['date']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 <div class="section talks" style="margin-top: 5%">
     <div class="container">
         <div class="row">

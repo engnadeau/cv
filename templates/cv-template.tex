@@ -64,6 +64,18 @@
   \B{endfor -}
 \end{cventries}
 
+\cvsection{Publications}
+\begin{cventries}
+  \B{for e in cv['publications'] -}
+  \cventry
+  {\V{e['authors']}}
+  {\V{e['name']}}
+  {\V{e['organization']}}
+  {\V{e['date']}}
+  {}
+  \B{endfor -}
+\end{cventries}
+
 \cvsection{Talks}
 \begin{cventries}
   \B{for e in cv['talks'] -}
@@ -111,18 +123,6 @@
   {}
   \B{endfor -}
 \end{cvhonors}
-
-\cvsection{Skills}
-\B{set size = cv['skills']|length -}
-\begin{multicols}{\V{size}}
-  \begin{itemize}
-    \B{for e in cv['skills'] -}
-    \B{for s in e['keywords'] -}
-    \item {\V{s}}
-    \B{endfor -}
-    \B{endfor -}
-  \end{itemize}
-\end{multicols}
 
 \cvsection{Certifications}
 \begin{description}
