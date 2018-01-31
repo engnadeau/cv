@@ -298,3 +298,7 @@ ENV/
 
 *.pdf
 nnadeau-cv.tex
+
+# duplicate elements from submodule
+fonts/
+awesome-cv.cls
