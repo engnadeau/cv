@@ -11,18 +11,12 @@ basics:
   location: 'Montréal, Canada'
 
 social_media:
-  - organization: 'Twitter'
+  twitter:
     name: 'EngNadeau'
-    url: 'https://twitter.com/engnadeau'
-  - organization: 'LinkedIn'
-    name: 'Nicholas Nadeau'
-    url: 'https://www.linkedin.com/in/nicholas-nadeau-p-eng-avs-02092832'
-  - organization: 'Google Scholar'
-    name: 'Nicholas Nadeau'
-    url: 'https://scholar.google.ca/citations?user=Soo4zroAAAAJ&hl=en'
-  - organization: 'GitHub'
+    url: 'https://twitter.com/EngNadeau'
+  github:
     name: 'nnadeau'
-    url: 'https://github.com/nnadeau'
+    url: 'https://github.com/nnadeau/'
 
 work:
   - name: 'Mechanical Engineer'
@@ -61,7 +55,7 @@ volunteer:
     - '2011'
 
 education:
-  - name: 'PhD - Precision \& Collaborative Robotics'
+  - name: 'PhD - Precision and Collaborative Robotics'
     organization: 'École de technologie supérieure'
     location: 'Montréal, Canada'
     dates:

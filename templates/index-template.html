@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>{{cv['basics']['name']|join(' ')}}</title>
+    <meta name="description" content="{{cv['basics']['titles']|join(', ')}}">
+    <meta name="author" content="{{cv['basics']['name']|join(' ')}}">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+          rel="stylesheet" type="text/css">
+
+    <!-- FONT AWESOME
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../site/css/normalize.css">
+    <link rel="stylesheet" href="../site/css/skeleton.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../site/favicon.ico">
+
+</head>
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="section title" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <div class="one-half column">
+                <h1>{{cv['basics']['name']|join(' ')}}</h1>
+                <p>{{cv['basics']['titles']|join(', ')}}</p>
+            </div>
+            <div class="one-third column">
+                <a class="button u-pull-right"
+                   href="https://github.com/nnadeau/cv/releases/latest">Download
+                    PDF</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <a style="text-decoration:none"
+                   href="mailto:{{cv['basics']['email']}}">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    {{cv['basics']['email']}}
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <a style="text-decoration:none"
+                   href="http://{{cv['basics']['website']}}">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    {{cv['basics']['website']}}
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <a style="text-decoration:none"
+                   href="{{cv['social_media']['github']['url']}}">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    {{cv['social_media']['github']['name']}}
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <a style="text-decoration:none"
+                   href="{{cv['social_media']['twitter']['url']}}">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    {{cv['social_media']['twitter']['name']}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section education" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Education</h2>
+        </div>
+        {% for e in cv['education'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['dates']|join(' - ')}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section work" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Work</h2>
+        </div>
+        {% for e in cv['work'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+                <ul>
+                    {% for s in e['summary'] %}
+                    <li>{{s}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['dates']|join(' - ')}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section volunteer" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Volunteer</h2>
+        </div>
+        {% for e in cv['volunteer'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['dates']|join(' - ')}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section talks" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Talks</h2>
+        </div>
+        {% for e in cv['talks'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['date']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section workshops" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Workshops</h2>
+        </div>
+        {% for e in cv['workshops'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['date']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section projects" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Projects</h2>
+        </div>
+        {% for e in cv['projects'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['organization']}}</h5>
+                <p>{{e['name']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['location']}}</p>
+                <p>{{e['dates']|join(' - ')}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section awards" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Awards</h2>
+        </div>
+        {% for e in cv['awards'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['name']}}</h5>
+                <p>{{e['organization']}}</p>
+            </div>
+            <div class="one-third column">
+                <p>{{e['date']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section skills" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Skills</h2>
+        </div>
+        <div class="row">
+            {% for e in cv['skills'] %}
+            <div class="two columns">
+                <ul>
+                    {% for s in e['keywords'] %}
+                    <li>{{s}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="section certifications" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Certifications</h2>
+        </div>
+        {% for e in cv['certifications'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['name']}}</h5>
+                <p>{{e['organization']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="section languages" style="margin-top: 5%">
+    <div class="container">
+        <div class="row">
+            <h2>Languages</h2>
+        </div>
+        {% for e in cv['languages'] %}
+        <div class="row">
+            <div class="two-thirds column">
+                <h5>{{e['name']}}</h5>
+                <p>{{e['fluency']}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
