@@ -5,7 +5,6 @@ language: python
 python: 3.6
 
 before_install:
-- find .
 - sudo apt -qq update
 
 install:
@@ -17,6 +16,7 @@ install:
 before_script:
 - ./generate-build-dir.sh
 - ./generate-site-dir.sh
+- find .
 
 script:
 - python generate_cv.py
