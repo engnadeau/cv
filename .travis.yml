@@ -20,7 +20,8 @@ before_script:
 
 script:
 - python generate_cv.py
-- xelatex build/nicholas-nadeau-cv.tex
+- cd build/
+- xelatex nicholas-nadeau-cv.tex
 
 notifications:
   email: false
