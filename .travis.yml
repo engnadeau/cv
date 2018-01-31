@@ -22,6 +22,7 @@ script:
 - python generate_cv.py
 - cd build/
 - xelatex nicholas-nadeau-cv.tex
+- cd ..
 
 notifications:
   email: false
