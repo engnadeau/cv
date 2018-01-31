@@ -1,0 +1,191 @@
+basics:
+  name:
+  - 'Nicholas'
+  - 'Nadeau'
+  titles:
+  - 'Professional Engineer (P.Eng.)'
+  - 'Associate Value Specialist (AVS)'
+  email: 'nicholas.nadeau@gmail.com'
+  phone: '+1-514-573-5620'
+  website: 'www.nicholasnadeau.me'
+  location: 'Montréal, Canada'
+
+social_media:
+  twitter:
+    name: 'EngNadeau'
+    url: 'https://twitter.com/EngNadeau'
+  github:
+    name: 'nnadeau'
+    url: 'https://github.com/nnadeau/'
+
+work:
+  - name: 'Mechanical Engineer'
+    organization: 'Rogue Research Inc.'
+    location: 'Montréal, Canada'
+    dates:
+    - '2011'
+    - ''
+    summary:
+    - 'Responsible for mechanical research, design, and development of brain imaging and robotic products.'
+
+volunteer:
+  - name: 'Communications Administrator'
+    organization: 'Interaction du quartier Peter-McGill'
+    location: 'Montréal, Canada'
+    dates:
+    - '2013'
+    - '2014'
+  - name: 'Discover McGill and Orientation Week Leader'
+    organization: 'McGill University'
+    location: 'Montréal, Canada'
+    dates:
+    - '2011'
+    - '2014'
+  - name: 'Treasurer and Communications Administrator'
+    organization: 'Forum Jeunesse Centre-ville'
+    location: 'Montréal, Canada'
+    dates:
+    - '2012'
+    - '2013'
+  - name: 'Volunteer Math and Science Teacher'
+    organization: 'Innovation Jeunes'
+    location: 'Montréal, Canada'
+    dates:
+    - '2009'
+    - '2011'
+
+education:
+  - name: 'PhD - Precision and Collaborative Robotics'
+    organization: 'École de technologie supérieure'
+    location: 'Montréal, Canada'
+    dates:
+    - '2014'
+    - ''
+  - name: 'B.Eng. - Mechanical Engineering, Biomedical Engineering Minor'
+    organization: 'McGill University'
+    location: 'Montréal, Canada'
+    dates:
+    - '2010'
+    - '2014'
+  - name: 'DEC - Honours Health Science'
+    organization: 'Dawson College'
+    location: 'Montréal, Canada'
+    dates:
+    - '2008'
+    - '2010'
+
+awards:
+  - name: 'Alexander Graham Bell Canada Graduate Scholarship'
+    organization: 'NSERC'
+    date: '2015'
+  - name: 'Mitacs Accelerate Industrial Research Grant'
+    organization: 'Mitacs'
+    date: '2014'
+  - name: 'Graduation Honours'
+    organization: 'McGill University'
+    date: '2014'
+  - name: 'Québec Iron Titanium Scholarship'
+    organization: 'McGill University'
+    date: '2013'
+  - name: 'Abe and Jennie Brock Award'
+    organization: 'McGill University'
+    date: '2013'
+  - name: 'Dean''s Honour List'
+    organization: 'McGill University'
+    date: '2013'
+  - name: 'Industrial Undergraduate Research Award'
+    organization: 'NSERC'
+    date: '2013'
+  - name: 'Industrial Undergraduate Research Award'
+    organization: 'NSERC'
+    date: '2012'
+  - name: 'Industrial Undergraduate Research Award'
+    organization: 'NSERC'
+    date: '2011'
+  - name: 'Golden Key International Honour Society'
+    organization: 'McGill University'
+    date: '2011'
+  - name: 'First Class Graduation Honours'
+    organization: 'Dawson College'
+    date: '2010'
+  - name: 'Athletic Academic Achievement Award'
+    organization: 'Dawson College'
+    date: '2010'
+
+skills:
+  - type: 'Programming'
+    keywords:
+    - 'Python'
+    - 'Java'
+    - 'C/C++'
+    - 'OpenCV'
+  - type: 'Engineering'
+    keywords:
+    - 'Robotics'
+    - 'Biomedical'
+    - 'Prototyping'
+    - 'Product Design'
+  - type: 'Specialty Software'
+    keywords:
+    - 'SOLIDWORKS'
+    - 'Inventor'
+    - 'Photoshop'
+    - 'Illustrator'
+
+languages:
+  - name: 'English'
+    fluency: 'Native'
+  - name: 'French'
+    fluency: 'Native'
+
+certifications:
+  - name: 'Professional Engineer (P.Eng.)'
+    organization: 'Ordre des ingénieurs du Québec'
+  - name: 'Associate Value Specialist (AVS)'
+    organization: 'SAVE International'
+
+talks:
+  - name: 'Speaker - Exhibition Summit'
+    organization: 'Clearpoint Elementary'
+    location: 'Pointe-Claire, Canada'
+    date: '2016-12'
+  - name: 'Speaker - Explore Camp'
+    organization: 'McGill Faculty of Medicine'
+    location: 'Montréal, Canada'
+    date: '2015-06'
+  - name: 'Keynote  - Career Seminar'
+    organization: 'Riverdale High School'
+    location: 'Montréal, Canada'
+    date: '2014-05'
+  - name: 'Keynote - Career Seminar'
+    organization: 'Riverdale High School'
+    location: 'Montréal, Canada'
+    date: '2014-02'
+  - name: 'Keynote - Science Showcase'
+    organization: 'Lester B. Pearson School Board'
+    location: 'Montréal, Canada'
+    date: '2013-05'
+
+workshops:
+  - name: 'MUSE 1.0 Bedside Ultrasound Course for Primary Care Clinicians'
+    organization: 'McGill University Steinberg Centre for Simulation and Interactive Learning'
+    location: 'Montréal, Canada'
+    date: '2017-01'
+  - name: 'Collaborative Robots Workshop'
+    organization: 'RIA International'
+    location: 'Boston, U.S.'
+    date: '2016-05'
+
+projects:
+  - name: 'Team Coordinator and Electronics Designer - Formula SAE'
+    organization: 'McGill Racing Team'
+    location: 'Montréal, Canada'
+    dates:
+    - '2010'
+    - '2013'
+  - name: 'Mechanical Designer - Electricity-free Polymerase Chain Reaction (PCR) System'
+    organization: 'McGill University Micro and NanoBioengineering Lab'
+    location: 'Montréal, Canada'
+    dates:
+    - '2013'
+    - '2014'

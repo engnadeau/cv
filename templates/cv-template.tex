@@ -1,101 +1,111 @@
 \documentclass[11pt, letterpaper]{awesome-cv}
+
 \usepackage{multicol}   % multicolumn list
 \usepackage{enumitem}   % list spacing
+
 \setlist{nosep} % list spacing
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{margin=0.5in}
 \fontdir[fonts/]
 \definecolor{awesome}{HTML}{414141}
 
-\name{\V{resume.first_name}}{\V{resume.last_name}}
-\address{\V{resume.address}}
-\mobile{\V{resume.phone}}
-\email{\V{resume.email}}
-\homepage{\V{resume.site}}
-\position{\V{resume.label}}
-
-\makecvfooter{\today}{\V{resume.first_name} \V{resume.last_name}}{\thepage}
+% awesome cv data
+\name{\V{cv['basics']['name'][0]}}{\V{cv['basics']['name'][1]}}
+\address{\V{cv['basics']['location']}}
+\mobile{\V{cv['basics']['phone']}}
+\email{\V{cv['basics']['email']}}
+\position{\V{cv['basics']['titles']|join(', ')}}
+\homepage{\V{cv['basics']['website']}}
+\github{\V{cv['social_media']['github']['name']}}
+\twitter{\V{cv['social_media']['twitter']['name']}}
+\makecvfooter{\today}{\V{cv['basics']['name']|join(' ')}}{\thepage}
 
 \begin{document}
 \makecvheader
 
 \cvsection{Education}
 \begin{cventries}
-  \B{for e in resume.education -}
+  \B{for e in cv['education'] -}
   \cventry
-  {\V{e['area']}}
-  {\V{e['institution']}}
+  {\V{e['name']}}
+  {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']} - \V{e['endDate']}}
+  {\V{e['dates']|join(' - ')}}
   {}
   \B{endfor -}
 \end{cventries}
 
 \cvsection{Work}
 \begin{cventries}
-  \B{for e in resume.work -}
+  \B{for e in cv['work'] -}
   \cventry
-  {\V{e['position']}}
-  {\V{e['company']}}
+  {\V{e['name']}}
+  {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']} - \V{e['endDate']}}
-  {}
+  {\V{e['dates']|join(' - ')}}
+  {
+  \begin{cvitems} % Description(s) bullet points
+  \B{for s in e['summary'] -}
+  \item{\V{s}}
+  \B{endfor -}
+  \end{cvitems}
+  }
   \B{endfor -}
 \end{cventries}
 
 \cvsection{Volunteer}
 \begin{cventries}
-  \B{for e in resume.volunteer -}
+  \B{for e in cv['volunteer'] -}
   \cventry
-  {\V{e['position']}}
+  {\V{e['name']}}
   {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']} - \V{e['endDate']}}
+  {\V{e['dates']|join(' - ')}}
   {}
   \B{endfor -}
 \end{cventries}
 
-\cvsection{Presentations}
+\cvsection{Talks}
 \begin{cventries}
-  \B{for e in resume.presentations -}
+  \B{for e in cv['talks'] -}
   \cventry
-  {\V{e['roles']}, \V{e['name']}}
-  {\V{e['entity']}}
+  {\V{e['name']}}
+  {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']}}
+  {\V{e['date']}}
   {}
   \B{endfor -}
 \end{cventries}
 
 \cvsection{Workshops}
 \begin{cventries}
-  \B{for e in resume.workshops -}
+  \B{for e in cv['workshops'] -}
   \cventry
-  {\V{e['roles']}, \V{e['entity']}}
   {\V{e['name']}}
+  {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']}}
+  {\V{e['date']}}
   {}
   \B{endfor -}
 \end{cventries}
 
 \cvsection{Projects}
 \begin{cventries}
-  \B{for e in resume.projects -}
+  \B{for e in cv['projects'] -}
   \cventry
-  {\V{e['roles']}, \V{e['entity']}}
   {\V{e['name']}}
+  {\V{e['organization']}}
   {\V{e['location']}}
-  {\V{e['startDate']} - \V{e['endDate']}}
-  {\V{e['summary']}}
+  {\V{e['dates']|join(' - ')}}
+  {}
   \B{endfor -}
 \end{cventries}
 
-\cvsection{Honors \& Awards}
+\cvsection{Awards}
 \begin{cvhonors}
-  \B{for e in resume.awards -}
+  \B{for e in cv['awards'] -}
   \cvhonor
-  {\V{e['title']}}
-  {\V{e['awarder']}}
+  {\V{e['name']}}
+  {\V{e['organization']}}
   {}
   {\V{e['date']}}
   {}
@@ -103,10 +113,10 @@
 \end{cvhonors}
 
 \cvsection{Skills}
-\B{set size = resume.skills|length -}
+\B{set size = cv['skills']|length -}
 \begin{multicols}{\V{size}}
   \begin{itemize}
-    \B{for e in resume.skills -}
+    \B{for e in cv['skills'] -}
     \B{for s in e['keywords'] -}
     \item {\V{s}}
     \B{endfor -}
@@ -116,15 +126,15 @@
 
 \cvsection{Certifications}
 \begin{description}
-  \B{for e in resume.certifications -}
-  \item[\V{e['name']}] \V{e['entity']}
+  \B{for e in cv['certifications'] -}
+  \item[\V{e['name']}] \V{e['organization']}
   \B{endfor -}
 \end{description}
 
 \cvsection{Languages}
 \begin{description}
-  \B{for e in resume.languages -}
-  \item[\V{e['language']}] \V{e['fluency']}
+  \B{for e in cv['languages'] -}
+  \item[\V{e['name']}] \V{e['fluency']}
   \B{endfor -}
 \end{description}
 \end{document}
