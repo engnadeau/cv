@@ -271,25 +271,6 @@
     </div>
 </div>
 
-<div class="section skills" style="margin-top: 5%">
-    <div class="container">
-        <div class="row">
-            <h2>Skills</h2>
-        </div>
-        <div class="row">
-            {% for e in cv['skills'] %}
-            <div class="two columns">
-                <ul>
-                    {% for s in e['keywords'] %}
-                    <li>{{s}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
 <div class="section certifications" style="margin-top: 5%">
     <div class="container">
         <div class="row">
