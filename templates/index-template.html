@@ -5,9 +5,9 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>{{cv['basics']['name']|join(' ')}}</title>
-    <meta name="description" content="{{cv['basics']['titles']|join(', ')}}">
-    <meta name="author" content="{{cv['basics']['name']|join(' ')}}">
+    <title>{{ cv['basics']['name']|join(' ') }}</title>
+    <meta name="description" content="{{ cv['basics']['titles']|join(', ') }}">
+    <meta name="author" content="{{ cv['basics']['name']|join(' ') }}">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -27,6 +27,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="custom.css">
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,258 +54,228 @@
 </head>
 <body>
 
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="section title" style="margin-top: 5%">
-    <div class="container">
+<div class="container" style="margin-top: 5%">
+    <section class="header">
         <div class="row">
-            <div class="one-half column">
-                <h1>{{cv['basics']['name']|join(' ')}}</h1>
-                <p>{{cv['basics']['titles']|join(', ')}}</p>
+            <div class="offset-by-one-third two columns">
+                <a class="button u-full-width"
+                   href="https://nicholasnadeau.me/">Home</a>
             </div>
-            <div class="one-third column">
-                <a class="button u-pull-right"
-                   href="https://github.com/nnadeau/cv/releases/latest">Download
-                    PDF</a>
+            <div class="two columns">
+                <a class="button u-full-width"
+                   href="https://github.com/nnadeau/cv/releases/latest">Download</a>
             </div>
         </div>
         <div class="row">
-            <div class="one-third column">
+            <div class="twelve columns">
+                <h1>{{ cv['basics']['name']|join(' ') }}</h1>
+                <p>{{ cv['basics']['titles']|join(', ') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
                 <a style="text-decoration:none"
-                   href="mailto:{{cv['basics']['email']}}">
+                   href="mailto:{{ cv['basics']['email'] }}">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    {{cv['basics']['email']}}
+                    {{ cv['basics']['email'] }}
                 </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="one-third column">
+                <br>
                 <a style="text-decoration:none"
-                   href="http://{{cv['basics']['website']}}">
+                   href="http://{{ cv['basics']['website'] }}">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    {{cv['basics']['website']}}
+                    {{ cv['basics']['website'] }}
                 </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="one-third column">
+                <br>
                 <a style="text-decoration:none"
-                   href="{{cv['social_media']['github']['url']}}">
+                   href="{{ cv['social_media']['github']['url'] }}">
                     <i class="fa fa-github" aria-hidden="true"></i>
-                    {{cv['social_media']['github']['name']}}
+                    {{ cv['social_media']['github']['name'] }}
                 </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="one-third column">
+                <br>
                 <a style="text-decoration:none"
-                   href="{{cv['social_media']['twitter']['url']}}">
+                   href="{{ cv['social_media']['twitter']['url'] }}">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
-                    {{cv['social_media']['twitter']['name']}}
+                    {{ cv['social_media']['twitter']['name'] }}
                 </a>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="section education" style="margin-top: 5%">
-    <div class="container">
+    <section class="education">
         <div class="row">
             <h2>Education</h2>
         </div>
         {% for e in cv['education'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['dates']|join(' - ') }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['dates']|join(' - ')}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section work" style="margin-top: 5%">
-    <div class="container">
+    <section class="work">
         <div class="row">
             <h2>Work</h2>
         </div>
         {% for e in cv['work'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
-                <ul>
-                    {% for s in e['summary'] %}
-                    <li>{{s}}</li>
-                    {% endfor %}
-                </ul>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                    <ul>
+                        {% for s in e['summary'] %}
+                            <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['dates']|join(' - ') }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['dates']|join(' - ')}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section volunteer" style="margin-top: 5%">
-    <div class="container">
+    <section class="volunteer">
         <div class="row">
             <h2>Volunteer</h2>
         </div>
         {% for e in cv['volunteer'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['dates']|join(' - ') }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['dates']|join(' - ')}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section publications" style="margin-top: 5%">
-    <div class="container">
+    <section class="publications">
         <div class="row">
             <h2>Publications</h2>
         </div>
         {% for e in cv['publications'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['name']}}</h5>
-                <p>{{e['authors']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['name'] }}</h5>
+                    <p>{{ e['authors'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['organization'] }}</p>
+                    <p>{{ e['date'] }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['organization']}}</p>
-                <p>{{e['date']}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section talks" style="margin-top: 5%">
-    <div class="container">
+    <section class="talks">
         <div class="row">
             <h2>Talks</h2>
         </div>
         {% for e in cv['talks'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['date'] }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['date']}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section workshops" style="margin-top: 5%">
-    <div class="container">
+    <section class="workshops">
         <div class="row">
             <h2>Workshops</h2>
         </div>
         {% for e in cv['workshops'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['date'] }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['date']}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section projects" style="margin-top: 5%">
-    <div class="container">
+    <section class="projects">
         <div class="row">
             <h2>Projects</h2>
         </div>
         {% for e in cv['projects'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['organization']}}</h5>
-                <p>{{e['name']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['organization'] }}</h5>
+                    <p>{{ e['name'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['location'] }}</p>
+                    <p>{{ e['dates']|join(' - ') }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['location']}}</p>
-                <p>{{e['dates']|join(' - ')}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section awards" style="margin-top: 5%">
-    <div class="container">
+    <section class="awards">
         <div class="row">
             <h2>Awards</h2>
         </div>
         {% for e in cv['awards'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['name']}}</h5>
-                <p>{{e['organization']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['name'] }}</h5>
+                    <p>{{ e['organization'] }}</p>
+                </div>
+                <div class="one-third column">
+                    <p>{{ e['date'] }}</p>
+                </div>
             </div>
-            <div class="one-third column">
-                <p>{{e['date']}}</p>
-            </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section certifications" style="margin-top: 5%">
-    <div class="container">
+    <section class="certifications">
         <div class="row">
             <h2>Certifications</h2>
         </div>
         {% for e in cv['certifications'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['name']}}</h5>
-                <p>{{e['organization']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['name'] }}</h5>
+                    <p>{{ e['organization'] }}</p>
+                </div>
             </div>
-        </div>
         {% endfor %}
-    </div>
-</div>
+    </section>
 
-<div class="section languages" style="margin-top: 5%">
-    <div class="container">
+    <section class="languages">
         <div class="row">
             <h2>Languages</h2>
         </div>
         {% for e in cv['languages'] %}
-        <div class="row">
-            <div class="two-thirds column">
-                <h5>{{e['name']}}</h5>
-                <p>{{e['fluency']}}</p>
+            <div class="row">
+                <div class="two-thirds column">
+                    <h5>{{ e['name'] }}</h5>
+                    <p>{{ e['fluency'] }}</p>
+                </div>
             </div>
-        </div>
         {% endfor %}
-    </div>
+    </section>
 </div>
-
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
