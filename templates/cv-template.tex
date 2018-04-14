@@ -114,7 +114,7 @@
 
 \cvsection{Awards}
 \begin{cvhonors}
-  \B{for e in cv['awards'] -}
+  \B{for e in cv['awards'] if not e['is_exclude'] -}
   \cvhonor
   {\V{e['name']}}
   {\V{e['organization']}}

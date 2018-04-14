@@ -108,6 +108,7 @@ awards:
 - name: 'First Class Graduation Honours'
   organization: 'Dawson College'
   date: '2010'
+  is_exclude: true
 - name: 'Athletic Academic Achievement Award'
   organization: 'Dawson College'
   date: '2010'
