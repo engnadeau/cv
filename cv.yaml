@@ -123,6 +123,8 @@ certifications:
   organization: 'Ordre des ingénieurs du Québec (OIQ)'
 - name: 'Associate Value Specialist (AVS)'
   organization: 'SAVE International'
+- name: 'Open Water Diver'
+  organization: 'Professional Association of Diving Instructors (PADI)'
 
 talks:
 - name: 'Speaker'
