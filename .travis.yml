@@ -22,6 +22,10 @@ script:
 - python generate_cv.py
 - cd build/
 - xelatex *.tex
+- cd ..
+
+after_script:
+- find .
 
 notifications:
   email: false
