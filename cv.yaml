@@ -64,6 +64,11 @@ education:
   dates:
   - '2014'
   - ''
+  summary:
+  - 'Developed robotic frameworks for collaborative medical ultrasound.'
+  - 'Created machine learning models for classification of physical human-robot interaction.'
+  - 'Invented a novel, robust, low-cost robot calibration platform.'
+  - 'Designed genetic algorithms for real-time physical human-robot trajectory optimization.'
 - name: 'B.Eng. - Mechanical Engineering, Biomedical Engineering Minor'
   organization: 'McGill University'
   location: 'Montréal, Canada'
@@ -115,6 +120,7 @@ awards:
 - name: 'Athletic Academic Achievement Award'
   organization: 'Dawson College'
   date: '2010'
+  is_exclude: true
 
 languages:
 - name: 'English'

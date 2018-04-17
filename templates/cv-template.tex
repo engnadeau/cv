@@ -30,7 +30,13 @@
   {\V{e['organization']}}
   {\V{e['location']}}
   {\V{e['dates']|join(' - ')}}
-  {}
+  {
+  \begin{cvitems} % Description(s) bullet points
+  \B{for s in e['summary'] -}
+  \item{\V{s}}
+  \B{endfor -}
+  \end{cvitems}
+  }
   \B{endfor -}
 \end{cventries}
 
