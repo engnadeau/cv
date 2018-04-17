@@ -1,5 +1,4 @@
 import logging
-from datetime import datetime
 from pathlib import Path
 
 import jinja2
@@ -45,8 +44,7 @@ def run():
 
     # generate cv
     build_dir = root_dir / 'build'  # type: Path
-    timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-    cv_tex_path = build_dir / f'nicholas-nadeau-cv-{timestamp}.tex'
+    cv_tex_path = build_dir / f'nicholas-nadeau-cv.tex'
     logging.info(f'Exporting tex: {cv_tex_path.resolve()}')
     with open(cv_tex_path, 'w') as f:
         out = template.render(cv=cv_data)
