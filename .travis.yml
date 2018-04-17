@@ -21,7 +21,8 @@ before_script:
 script:
 - python generate_cv.py
 - cd build/
-- xelatex *.tex
+- xelatex nicholas-nadeau-cv.tex
+- mv nicholas-nadeau-cv.pdf nicholas-nadeau-cv-$(date +'%Y%m%d%H%M%S').pdf
 - cd ..
 
 after_script:
