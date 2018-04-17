@@ -110,6 +110,11 @@
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
                     <p>{{ e['name'] }}</p>
+                    <ul>
+                        {% for s in e['summary'] %}
+                            <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="one-third column">
                     <p>{{ e['location'] }}</p>
