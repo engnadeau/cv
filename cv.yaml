@@ -27,6 +27,9 @@ work:
   - ''
   summary:
   - 'Responsible for mechanical research, design, and development of brain imaging and robotic products.'
+  - 'Developed trajectory generation algorithms (C++) for collaborative veterinary neurosurgery.'
+  - 'Created thermal models (Python) for transcranial magnetic stimulation coils.'
+  - 'Constructed ray tracing models for the optical design of near-infrared spectroscopy optodes.'
 
 volunteer:
 - name: 'Communications Administrator'
