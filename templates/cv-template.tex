@@ -58,6 +58,24 @@
   \B{endfor -}
 \end{cventries}
 
+\cvsection{Consulting}
+\begin{cventries}
+  \B{for e in cv['consulting'] -}
+  \cventry
+  {\V{e['name']}}
+  {\V{e['organization']}}
+  {\V{e['location']}}
+  {\V{e['dates']|join(' - ')}}
+  {
+  \begin{cvitems} % Description(s) bullet points
+  \B{for s in e['summary'] -}
+  \item{\V{s}}
+  \B{endfor -}
+  \end{cvitems}
+  }
+  \B{endfor -}
+\end{cventries}
+
 \cvsection{Volunteer}
 \begin{cventries}
   \B{for e in cv['volunteer'] -}
@@ -83,16 +101,16 @@
 \end{cventries}
 
 \cvsection{Talks}
-\begin{cventries}
-  \B{for e in cv['talks'] -}
-  \cventry
+\begin{cvhonors}
+  \B{for e in cv['talks'] if not e['is_exclude'] -}
+  \cvhonor
   {\V{e['name']}}
   {\V{e['organization']}}
-  {\V{e['location']}}
+  {}
   {\V{e['date']}}
   {}
   \B{endfor -}
-\end{cventries}
+\end{cvhonors}
 
 \cvsection{Workshops}
 \begin{cventries}
