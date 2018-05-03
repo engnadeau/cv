@@ -14,16 +14,11 @@ install:
 - pip install -r requirements.txt
 
 before_script:
-- ./generate-build-dir.sh
-- ./generate-site-dir.sh
+- ./utilities/generate-build-dirs.sh
 - find .
 
 script:
-- python generate_cv.py
-- cd build/
-- xelatex nicholas-nadeau-cv.tex
-- mv nicholas-nadeau-cv.pdf nicholas-nadeau-cv-$(date +'%Y%m%d%H%M%S').pdf
-- cd ..
+- ./utilities/build-cv.sh
 
 after_script:
 - find .
