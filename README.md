@@ -4,5 +4,5 @@
 [![Updates](https://pyup.io/repos/github/nnadeau/cv/shield.svg)](https://pyup.io/repos/github/nnadeau/cv/)
 
 # CV
-My personal CV; get the latest version [here](https://github.com/nnadeau/cv/releases/latest) or see it rendered [here](http://nicholasnadeau.me/cv/)
+My personal CV; get the latest version [here](https://github.com/nnadeau/cv/releases/latest) or see it rendered [here](https://nnadeau.github.io/cv/)
 
