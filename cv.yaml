@@ -195,6 +195,10 @@ projects:
   - '2014'
 
 publications:
+- name: 'Evolutionary Motion Control Optimization in Physical Human-Robot Interaction'
+  authors: 'Nicholas A. Nadeau, Ilian A. Bonev'
+  organization: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)'
+  date: '2018'
 - name: 'Characterization of a robotic micro-surgical system for small-animal neurosurgery'
   authors: 'Nicholas A. Nadeau, Alexandru Ciobanu, Fred Lamer, Mathieu Coursolle, Sean McBride, Stephen Frey, Roch Comeau'
   organization: 'Society for Neuroscience'
