@@ -92,15 +92,13 @@
 \begin{cventries}
   \B{for e in cv['publications'] -}
   \cventry
-  {\V{e['authors']}}
+  {\V{e['authors']}. \V{e['organization']}.}
   {\V{e['name']}}
-  {\V{e['organization']}}
+  {}
   {\V{e['date']}}
   {}
   \B{endfor -}
 \end{cventries}
-
-\pagebreak
 
 \cvsection{Talks}
 \begin{cvhonors}
