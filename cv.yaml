@@ -43,6 +43,12 @@ consulting:
   - 'Recommended long-term approach to strategic suppliers and technologies with the aim of optimizing operations and delivering savings.'
 
 volunteer:
+- name: 'Reviewer'
+  organization: 'The Journal of Open Source Software (JOSS)'
+  location: ''
+  dates:
+  - '2018'
+  - ''
 - name: 'Communications Administrator'
   organization: 'Interaction du quartier Peter-McGill'
   location: 'Montréal, Canada'
@@ -197,6 +203,10 @@ projects:
 publications:
 - name: 'Evolutionary Motion Control Optimization in Physical Human-Robot Interaction'
   authors: 'Nicholas A. Nadeau, Ilian A. Bonev'
+  organization: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)'
+  date: '2018'
+- name: 'An Extrinsic Dexterity Approach to the IROS 2018 Fan Robotic Challenge Modality B'
+  authors: 'Jennifer Kwiatkowski, Jean-Philippe Roberge, Nicholas A. Nadeau, Louis L''Écuyer-Lapierre, Vincent Duchaine'
   organization: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)'
   date: '2018'
 - name: 'Characterization of a robotic micro-surgical system for small-animal neurosurgery'
