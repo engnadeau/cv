@@ -43,6 +43,12 @@ consulting:
   - 'Recommended long-term approach to strategic suppliers and technologies with the aim of optimizing operations and delivering savings.'
 
 volunteer:
+- name: 'Reviewer'
+  organization: 'The Journal of Open Source Software (JOSS)'
+  location: ''
+  dates:
+  - '2018'
+  - ''
 - name: 'Communications Administrator'
   organization: 'Interaction du quartier Peter-McGill'
   location: 'Montréal, Canada'
