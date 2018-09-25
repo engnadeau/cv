@@ -162,6 +162,9 @@ certifications:
   organization: 'Professional Association of Diving Instructors (PADI)'
 
 talks:
+- name: 'Speaker - Evolutionary Motion Control Optimization in Physical Human-Robot Interaction'
+  organization: '2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)'
+  date: '2018-10'
 - name: 'Speaker - Calibrating Robots with Python'
   organization: 'PyCon Canada 2017'
   date: '2017-11'
