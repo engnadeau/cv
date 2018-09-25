@@ -19,12 +19,20 @@ social_media:
     url: 'https://github.com/nnadeau/'
 
 work:
-- name: 'Mechanical Engineer'
+- name: 'Senior R&D Engineer'
+  organization: 'AON3D'
+  location: 'Montréal, Canada'
+  dates:
+  - '2018'
+  - ''
+  summary:
+  - 'Responsible for innovation and technology development to drive 10x revenue.'
+- name: 'R&D Engineer'
   organization: 'Rogue Research Inc.'
   location: 'Montréal, Canada'
   dates:
   - '2011'
-  - ''
+  - '2018'
   summary:
   - 'Responsible for mechanical research, design, and development of brain imaging and robotic products.'
   - 'Developed trajectory generation algorithms (C++) for collaborative veterinary neurosurgery.'
@@ -36,7 +44,7 @@ consulting:
   location: 'Montréal, Canada'
   dates:
   - '2017'
-  - ''
+  - '2018'
   summary:
   - 'Advised CEO throughout FounderFuel startup accelerator in order to go to market and raise seed capital.'
   - 'Led a team of engineers and directed robotics and software design, development, and implementation.'
