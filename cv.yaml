@@ -19,7 +19,7 @@ social_media:
     url: 'https://github.com/nnadeau/'
 
 work:
-- name: 'Senior R&D Engineer'
+- name: 'Senior R\&D Engineer'
   organization: 'AON3D'
   location: 'Montréal, Canada'
   dates:
@@ -27,7 +27,7 @@ work:
   - ''
   summary:
   - 'Responsible for innovation and technology development to drive 10x revenue.'
-- name: 'R&D Engineer'
+- name: 'R\&D Engineer'
   organization: 'Rogue Research Inc.'
   location: 'Montréal, Canada'
   dates:
