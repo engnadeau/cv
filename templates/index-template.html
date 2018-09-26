@@ -124,7 +124,7 @@
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
-                    <p>{{ e['name'] }}</p>
+                    <p>{{ e['name']|replace("\\", "") }}</p>
                     <ul>
                         {% for s in e['summary'] %}
                         <li>{{ s }}</li>
