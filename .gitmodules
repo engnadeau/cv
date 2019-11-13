@@ -1,0 +1,6 @@
+[submodule "modules/Awesome-CV"]
+	path = modules/Awesome-CV
+	url = https://github.com/posquit0/Awesome-CV.git
+[submodule "modules/Skeleton"]
+	path = modules/Skeleton
+	url = https://github.com/dhg/Skeleton.git
