@@ -6,9 +6,9 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>{{ cv['basics']['name']|join(' ') }}</title>
-    <meta name="description" content="{{ cv['basics']['titles']|join(', ') }}">
-    <meta name="author" content="{{ cv['basics']['name']|join(' ') }}">
+    <title>{{ data['personal']['first_name'] }} {{ data['personal']['last_name'] }}</title>
+    <meta name="description" content="{{ data['personal']['titles']|join(', ') }}">
+    <meta name="author" content="{{ data['personal']['name']|join(' ') }}">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,30 +64,30 @@
             </div>
             <div class="row">
                 <div class="twelve columns">
-                    <h1>{{ cv['basics']['name']|join(' ') }}</h1>
-                    <p>{{ cv['basics']['titles']|join(', ') }}</p>
+                    <h1>{{ data['personal']['name']|join(' ') }}</h1>
+                    <p>{{ data['personal']['titles']|join(', ') }}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="twelve columns">
-                    <a style="text-decoration:none" href="mailto:{{ cv['basics']['email'] }}">
+                    <a style="text-decoration:none" href="mailto:{{ data['personal']['email'] }}">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        {{ cv['basics']['email'] }}
+                        {{ data['personal']['email'] }}
                     </a>
                     <br>
-                    <a style="text-decoration:none" href="http://{{ cv['basics']['website'] }}">
+                    <a style="text-decoration:none" href="http://{{ data['personal']['website'] }}">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        {{ cv['basics']['website'] }}
+                        {{ data['personal']['website'] }}
                     </a>
                     <br>
-                    <a style="text-decoration:none" href="{{ cv['social_media']['github']['url'] }}">
+                    <a style="text-decoration:none" href="{{ data['social_media']['github']['url'] }}">
                         <i class="fa fa-github" aria-hidden="true"></i>
-                        {{ cv['social_media']['github']['name'] }}
+                        {{ data['social_media']['github']['name'] }}
                     </a>
                     <br>
-                    <a style="text-decoration:none" href="{{ cv['social_media']['twitter']['url'] }}">
+                    <a style="text-decoration:none" href="{{ data['social_media']['twitter']['url'] }}">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
-                        {{ cv['social_media']['twitter']['name'] }}
+                        {{ data['social_media']['twitter']['name'] }}
                     </a>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="row">
                 <h2>Education</h2>
             </div>
-            {% for e in cv['education'] %}
+            {% for e in data['education'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -120,7 +120,7 @@
             <div class="row">
                 <h2>Work</h2>
             </div>
-            {% for e in cv['work'] %}
+            {% for e in data['work'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -143,7 +143,7 @@
             <div class="row">
                 <h2>Consulting</h2>
             </div>
-            {% for e in cv['consulting'] %}
+            {% for e in data['consulting'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -166,7 +166,7 @@
             <div class="row">
                 <h2>Volunteer</h2>
             </div>
-            {% for e in cv['volunteer'] %}
+            {% for e in data['volunteer'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -184,7 +184,7 @@
             <div class="row">
                 <h2>Publications</h2>
             </div>
-            {% for e in cv['publications'] %}
+            {% for e in data['publications'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['name'] }}</h5>
@@ -212,7 +212,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for e in cv['talks'] %}
+                        {% for e in data['talks'] %}
                         <tr>
                             <td>{{ e['name'] }}</td>
                             <td>{{ e['organization'] }}</td>
@@ -228,7 +228,7 @@
             <div class="row">
                 <h2>Workshops</h2>
             </div>
-            {% for e in cv['workshops'] %}
+            {% for e in data['workshops'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -246,7 +246,7 @@
             <div class="row">
                 <h2>Projects</h2>
             </div>
-            {% for e in cv['projects'] %}
+            {% for e in data['projects'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['organization'] }}</h5>
@@ -274,7 +274,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for e in cv['awards'] %}
+                        {% for e in data['awards'] %}
                         <tr>
                             <td>{{ e['name'] }}</td>
                             <td>{{ e['organization'] }}</td>
@@ -290,7 +290,7 @@
             <div class="row">
                 <h2>Certifications</h2>
             </div>
-            {% for e in cv['certifications'] %}
+            {% for e in data['certifications'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['name'] }}</h5>
@@ -304,7 +304,7 @@
             <div class="row">
                 <h2>Languages</h2>
             </div>
-            {% for e in cv['languages'] %}
+            {% for e in data['languages'] %}
             <div class="row">
                 <div class="two-thirds column">
                     <h5>{{ e['name'] }}</h5>
