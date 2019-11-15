@@ -302,3 +302,6 @@ nnadeau-cv.tex
 # gh-pages deploy
 site/css
 site/index.html
+
+# NN
+__latexindent_temp.tex
