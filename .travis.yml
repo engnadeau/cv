@@ -13,11 +13,6 @@ script:
 notifications:
   email: false
 
-before_deploy:
-- git config --local user.name "nnadeau"
-- git config --local user.email "nicholas.nadeau@gmail.com"
-- git tag "$(date +'%Y.%m.%d')"
-
 deploy:
 - provider: releases
   skip_cleanup: true
