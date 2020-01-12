@@ -1,6 +1,6 @@
-.PHONY: pdf
+.PHONY: pdf site
 
-pdf: 
+pdf:
 	xelatex cv.tex
 	mv cv.pdf nicholas_nadeau_cv.pdf
 
