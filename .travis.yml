@@ -2,10 +2,10 @@ dist: bionic
 sudo: required
 
 before_install:
-- sudo apt -qq update
+- sudo apt-get -qq update
 
 install:
-- travis_wait sudo apt install -y texlive-full texlive-math-extra texlive-xetex
+- travis_wait sudo apt install -y texlive-full texlive-xetex
 
 script:
 - make site
