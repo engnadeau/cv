@@ -25,3 +25,7 @@ make site
 
 - [Master branch](https://github.com/nnadeau/cv/tree/master) is built by [Travis CI](https://github.com/nnadeau/cv/blob/master/.travis.yml) and deployed to [GH Pages](https://nnadeau.github.io/cv/)
 - The PDF is uploaded as an asset to the static site
+
+## Bugs
+
+- https://github.com/posquit0/Awesome-CV/issues/234
