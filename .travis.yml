@@ -8,6 +8,7 @@ install:
 - travis_wait sudo apt install -y texlive-full texlive-xetex
 
 script:
+- sed -i 's/\\setfontfamily\\FA/\\newfontfamily\\FA/g' awesome-cv.cls
 - make site
 
 notifications:
