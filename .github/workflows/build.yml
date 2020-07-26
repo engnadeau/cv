@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,18 +14,21 @@ jobs:
           sudo apt-get update -y && sudo apt-get install -y \
             texlive-full \
             texlive-xetex
-      - name: Build
+      - name: Build PDF
         run: |
           sed -i 's/\\setfontfamily\\FA/\\newfontfamily\\FA/g' awesome-cv.cls
           make site
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ steps.date.outputs.date }}
+          release_name: Release ${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -37,7 +40,7 @@ jobs:
           asset_path: ./nicholas_nadeau_cv.pdf
           asset_name: nicholas_nadeau_cv.pdf
           asset_content_type: application/pdf
-      - name: Deploy 🚀
+      - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
