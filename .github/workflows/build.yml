@@ -18,9 +18,9 @@ jobs:
         run: |
           sed -i 's/\\setfontfamily\\FA/\\newfontfamily\\FA/g' awesome-cv.cls
           make site
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Set tag name
+        id: tagname
+        run: echo "::set-output name=tagname::$(date +'%Y.%m.%d.%H.%M.%S')"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
