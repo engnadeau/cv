@@ -7,9 +7,8 @@ Get the latest version [here](https://nnadeau.github.io/cv/).
 
 ## Requirements
 
-- See [Travis CI config](.travis.yml) for packages to install
-  - LaTeX (e.g., `texlive`)
-  - XeTeX
+- `texlive-full`
+- `texlive-xetex`
 
 ## Usage
 
