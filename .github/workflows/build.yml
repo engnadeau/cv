@@ -16,6 +16,7 @@ jobs:
             texlive-xetex
       - name: Build
         run: |
+          sed -i 's/\\setfontfamily\\FA/\\newfontfamily\\FA/g' awesome-cv.cls
           make site
       - name: Create Release
         id: create_release
