@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nnadeau/cv.svg?branch=master)](https://travis-ci.org/nnadeau/cv)
+![Build and Publish](https://github.com/nnadeau/cv/workflows/Build%20and%20Publish/badge.svg)
 
 # CV
 
