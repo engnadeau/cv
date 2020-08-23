@@ -7,7 +7,7 @@
 <h3 align="center">CV</h3>
 
 <p align="center">
-Automated professional CV for Nicholas Nadeau
+LaTeX + GitHub Actions + Jamstack automated professional CV
 <br />
 <a href="https://nnadeau.github.io/cv/"><strong>Get the latest version</strong></a>
 <br />
