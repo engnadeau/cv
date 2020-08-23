@@ -1,9 +1,27 @@
+<br />
+<p align="center">
+<a href="https://github.com/nnadeau/cv">
+<img src="https://raw.githubusercontent.com/nnadeau/cv/master/media/logo.png" alt="Logo" width="80">
+</a>
+
+<h3 align="center">CV</h3>
+
+<p align="center">
+Automated professional CV for Nicholas Nadeau
+<br />
+<a href="https://nnadeau.github.io/cv/"><strong>Get the latest version</strong></a>
+<br />
+</p>
+</p>
+
 ![Build and Publish](https://github.com/nnadeau/cv/workflows/Build%20and%20Publish/badge.svg)
 
-# CV
+[![GitHub issues](https://img.shields.io/github/issues/nnadeau/cv)](https://github.com/nnadeau/cv/issues)
+[![GitHub forks](https://img.shields.io/github/forks/nnadeau/cv)](https://github.com/nnadeau/cv/network)
+[![GitHub stars](https://img.shields.io/github/stars/nnadeau/cv)](https://github.com/nnadeau/cv/stargazers)
+[![GitHub license](https://img.shields.io/github/license/nnadeau/cv)](https://github.com/nnadeau/cv/blob/master/LICENSE)
 
-My personal CV.
-Get the latest version [here](https://nnadeau.github.io/cv/).
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fnnadeau%2Fcv)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnnadeau%2Fcv)
 
 ## Requirements
 
@@ -22,9 +40,5 @@ make site
 
 ## Deployments
 
-- [Master branch](https://github.com/nnadeau/cv/tree/master) is built by [Travis CI](https://github.com/nnadeau/cv/blob/master/.travis.yml) and deployed to [GH Pages](https://nnadeau.github.io/cv/)
+- Master branch is automatically built and deployed
 - The PDF is uploaded as an asset to the static site
-
-## Bugs
-
-- https://github.com/posquit0/Awesome-CV/issues/234
