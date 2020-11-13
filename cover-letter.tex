@@ -1,0 +1,81 @@
+% !TEX program = xelatex
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\geometry{margin=0.5in}
+\fontdir[fonts/]
+
+% dark grey, https://www.color-hex.com/color/414141
+\definecolor{awesome}{HTML}{414141}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% awesome cv data
+\name{Nicholas}{Nadeau}
+\address{Montréal, Canada}
+\mobile{+1-514-573-5620}
+\email{nicholas.nadeau@gmail.com}
+\position{
+Professional Engineer (P.Eng.),
+Doctor of Philosophy (Ph.D.)
+}
+\homepage{www.nicholasnadeau.me}
+\github{nnadeau}
+\twitter{EngNadeau}
+\makecvfooter{\today}{}{\thepage}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% The company being applied to
+\recipient
+{XXX Recruitment Team}
+{XXX Inc.\\STREET\\CITY, STATE ZIP}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for POSITION}
+% How the letter is opened
+\letteropening{Dear XXX,}
+% How the letter is closed
+\letterclosing{Cheers,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{document}
+
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+{\today}
+{Nicholas Nadeau}
+{}
+
+% Print the title with above letter informations
+\makelettertitle
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{cvletter}
+
+    \lettersection{About Me}
+
+    I have has spent the last decade creating unique technologies at the intersection of hardware and software for the biomedical, cognitive neuroscience, robotics, and additive manufacturing domains.
+    Notably, my Ph.D. combined machine learning and collaborative robotics to develop methods for safe robotic freehand medical ultrasound.
+    Currently, I am an executive and the head of engineering at AON3D where I lead design, development, and R&D in both software and hardware to drive product innovation.
+
+    \lettersection{Why XXX?}
+
+    \lettersection{Why Me?}
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}
