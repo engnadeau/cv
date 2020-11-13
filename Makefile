@@ -1,6 +1,7 @@
 .PHONY: pdf-cover
 pdf-cover:
 	xelatex cover-letter.tex
+	mv cover-letter.pdf nicholas_nadeau_cover-letter.pdf
 
 .PHONY: pdf-cv
 pdf-cv:
