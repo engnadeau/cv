@@ -16,7 +16,6 @@ jobs:
             texlive-xetex
       - name: Build PDF
         run: |
-          sed -i 's/\\setfontfamily\\FA/\\newfontfamily\\FA/g' awesome-cv.cls
           make site
       - name: Set tag name
         id: tag_name
