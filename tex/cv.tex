@@ -1,7 +1,12 @@
 % !TEX program = xelatex
-\documentclass[11pt, letterpaper]{awesome-cv}
+
+\makeatletter
+\def\input@path{{tex/}}
+\makeatother
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\documentclass[11pt, letterpaper]{awesome-cv}
 
 % multicolumn list
 \usepackage{multicol}
@@ -49,7 +54,7 @@ Doctor of Philosophy (Ph.D.)
 
 \newpage
 
-\input{sections/awards.tex}
+% \input{sections/awards.tex}
 \input{sections/volunteer.tex}
 \input{sections/skills.tex}
 % \input{sections/projects.tex}

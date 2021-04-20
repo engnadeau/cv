@@ -1,16 +1,28 @@
-.PHONY: pdf-cover
-pdf-cover:
-	xelatex cover-letter.tex
-	mv cover-letter.pdf nicholas_nadeau_cover-letter.pdf
+.DEFAULT_GOAL := pdf
 
-.PHONY: pdf-cv
-pdf-cv:
-	xelatex cv.tex
-	mv cv.pdf nicholas_nadeau_cv.pdf
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# latex build
 
 .PHONY: pdf
 pdf: pdf-cv pdf-cover
 
+.PHONY: pdf-cover
+pdf-cover: awesome-cv-files
+	xelatex -output-directory=out tex/cover-letter.tex
+
+.PHONY: pdf-cv
+pdf-cv: awesome-cv-files
+	xelatex -output-directory=out tex/cv.tex
+
+.PHONY: awesome-cv-files
+awesome-cv-files:
+	cp awesome-cv/awesome-cv.cls .
+	cp awesome-cv/fontawesome.sty .
+	cp -r awesome-cv/fonts/ .
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# site deployment
+
 .PHONY: site
 site: pdf
-	cp nicholas_nadeau_cv.pdf site/nicholas_nadeau_cv.pdf
+	cp out/cv.pdf site/nicholas-nadeau_cv.pdf
