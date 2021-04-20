@@ -25,4 +25,4 @@ awesome-cv-files:
 
 .PHONY: site
 site: pdf
-	cp nicholas-nadeau_cv.pdf site/nicholas-nadeau_cv.pdf
+	cp out/cv.pdf site/nicholas-nadeau_cv.pdf
