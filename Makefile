@@ -26,5 +26,5 @@ awesome-cv-files:
 # site deployment
 
 .PHONY: site
-site: pdf
+site: pdf-cv
 	cp out/cv.pdf site/nicholas-nadeau_cv.pdf
