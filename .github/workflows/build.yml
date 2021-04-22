@@ -48,7 +48,7 @@ jobs:
           asset_content_type: application/pdf
 
       - name: Deploy to Pages
-        uses: JamesIves/github-pages-deploy-action@3.5.7
+        uses: JamesIves/github-pages-deploy-action@4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
