@@ -15,6 +15,7 @@ pdf-cover: awesome-cv-files
 pdf-cv: awesome-cv-files
 	mkdir -p out
 	xelatex -output-directory=out tex/cv.tex
+	cp out/cv.pdf nicholas-nadeau_cv.pdf
 
 .PHONY: awesome-cv-files
 awesome-cv-files:
