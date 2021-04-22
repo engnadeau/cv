@@ -11,17 +11,21 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+
       - name: Install dependencies
         run: |
           sudo apt-get update -y && sudo apt-get install -y \
             texlive-full \
             texlive-xetex
+
       - name: Build PDF
         run: |
           make site
+
       - name: Set tag name
         id: tag_name
         run: echo "::set-output name=tag_name::$(date +'%Y.%m.%d.%H.%M.%S')"
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -32,6 +36,7 @@ jobs:
           release_name: Release ${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
+
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         env:
@@ -41,6 +46,7 @@ jobs:
           asset_path: ./nicholas-nadeau_cv.pdf
           asset_name: nicholas-nadeau_cv.pdf
           asset_content_type: application/pdf
+
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
