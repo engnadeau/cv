@@ -8,10 +8,12 @@ pdf: pdf-cv pdf-cover
 
 .PHONY: pdf-cover
 pdf-cover: awesome-cv-files
+	mkdir -p out
 	xelatex -output-directory=out tex/cover-letter.tex
 
 .PHONY: pdf-cv
 pdf-cv: awesome-cv-files
+	mkdir -p out
 	xelatex -output-directory=out tex/cv.tex
 
 .PHONY: awesome-cv-files
