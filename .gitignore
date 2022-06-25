@@ -296,15 +296,15 @@ ENV/
 # Rope project settings
 .ropeproject
 
-*.pdf
-nnadeau-cv.tex
-
 # gh-pages deploy
 site/css
 site/index.html
 
-# NN
+# project-specific
 __latexindent_temp.tex
+*.pdf
 awesome-cv.cls
 fontawesome.sty
 fonts/
+nnadeau-cv.tex
+out/
