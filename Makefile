@@ -24,14 +24,13 @@ clean:
 debug:
 	@echo TEX sources: $(TEX_SOURCES)
 
-.PHONY: documentclass
-documentclass:
-	cp awesome-cv/awesome-cv.cls .
-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # file targets
 
-$(PDF_PATH): $(TEX_PATH) $(TEX_SOURCES) documentclass
+$(PDF_PATH): $(TEX_PATH) $(TEX_SOURCES) awesome-cv.cls
 	mkdir -p $(OUTPUT_DIR)
 	xelatex -output-directory=$(OUTPUT_DIR) $<
 	mv $(OUTPUT_DIR)/$(basename $(notdir $(TEX_PATH))).pdf $(PDF_PATH)
+
+awesome-cv.cls:
+	cp awesome-cv/awesome-cv.cls .
