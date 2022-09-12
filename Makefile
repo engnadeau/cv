@@ -14,7 +14,7 @@ pdf: $(PDF_PATH)
 
 .PHONY: site
 site: pdf
-	cp $(PDF_PATH) site/$(PDF_FNAME)
+	cp $(PDF_PATH) site/$(notdir $(PDF_PATH))
 
 .PHONY: clean
 clean:
