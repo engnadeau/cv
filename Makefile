@@ -24,6 +24,15 @@ clean:
 debug:
 	@echo TEX sources: $(TEX_SOURCES)
 
+.PHONY: docker
+docker:
+	docker run \
+		-v $$(pwd):/$$(basename $$(pwd)) \
+		-w /$$(basename $$(pwd)) \
+		-it \
+		texlive/texlive \
+		make
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # file targets
 
