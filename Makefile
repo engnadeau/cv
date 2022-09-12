@@ -13,7 +13,7 @@ PDF_PATH := $(OUTPUT_DIR)/nicholas-nadeau_cv.pdf
 pdf: $(PDF_PATH)
 
 .PHONY: site
-site: pdf
+site:
 	cp $(PDF_PATH) site/$(notdir $(PDF_PATH))
 
 .PHONY: clean
