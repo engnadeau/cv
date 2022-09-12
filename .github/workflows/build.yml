@@ -1,63 +1,24 @@
-name: Build & Publish
+name: Build
 
 on:
-  push:
-    branches: [master]
+  pull_request:
+    branches:
+      - master
+  workflow_call:
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
+    container: texlive/texlive:latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update -y && \
-          sudo apt-get install -y \
-            texlive-full \
-            texlive-xetex
-
-      - name: Build Site & PDF
-        run: |
-          make site
-
-      - name: Set tag name
-        id: tag_name
-        run: echo "::set-output name=tag_name::$(date +'%Y.%m.%d.%H.%M.%S')"
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          # This token is provided by Actions
-          # you do not need to create your own token
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build PDF
+        run: make pdf
+      - name: Archive PDF
+        uses: actions/upload-artifact@v3
         with:
-          tag_name: ${{ steps.tag_name.outputs.tag_name }}
-          release_name: Release ${{ steps.date.outputs.date }}
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # This pulls from the CREATE RELEASE step above,
-          # referencing it's ID to get its outputs object,
-          # which include a `upload_url`.
-          # See this blog post for more info:
-          # https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./nicholas-nadeau_cv.pdf
-          asset_name: nicholas-nadeau_cv.pdf
-          asset_content_type: application/pdf
-
-      - name: Deploy to Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: site # The folder the action should deploy.
+          name: pdf
+          path: out/*.pdf
+          retention-days: 5
