@@ -3,7 +3,7 @@
 <p align="center">
 LaTeX + GitHub Actions + Jamstack automated professional CV
 <br />
-<a href="https://github.com/nnadeau/cv/releases/latest"><strong>Get the latest version</strong></a>
+<a href="https://engnadeau.github.io/cv/nicholas-nadeau_cv.pdf"><strong>Get the latest version</strong></a>
 <br />
 </p>
 </p>
