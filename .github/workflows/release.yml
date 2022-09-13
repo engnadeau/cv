@@ -14,12 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Download PDF
-        uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v3
         with:
           name: pdf
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Build site
-        run: make site
+        run: cp out/*.pdf site/
       - name: Set tag name
         id: tag_name
         run: echo "::set-output name=tag_name::$(date +'%Y.%m.%d.%H.%M.%S')"

@@ -16,8 +16,7 @@ jobs:
           submodules: true
       - name: Build PDF
         run: make pdf
-      - name: Archive PDF
-        uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
           name: pdf
           path: out/*.pdf
