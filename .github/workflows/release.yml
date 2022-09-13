@@ -17,6 +17,8 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: pdf
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Build site
         run: cp out/*.pdf site/
       - name: Set tag name
