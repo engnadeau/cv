@@ -19,7 +19,7 @@ jobs:
         with:
           name: pdf
       - name: Build site
-        run: make site
+        run: cp out/*.pdf site/
       - name: Set tag name
         id: tag_name
         run: echo "::set-output name=tag_name::$(date +'%Y.%m.%d.%H.%M.%S')"
