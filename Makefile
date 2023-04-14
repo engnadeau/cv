@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := pdf
+.DEFAULT_GOAL := all
 
 TEX_PATH := tex/cv.tex
 TEX_SOURCES := $(shell find $(dir $(TEX_PATH)) -name '*.tex')
