@@ -19,12 +19,17 @@ My personal CV that's automatically generated using the following tech stack:
 
 ### Docker Development (Recommended)
 
-- `texlive/texlive` image
+```bash
+# Run the container
+docker run --rm -it -v $(pwd):/app -w /app --entrypoint /bin/bash texlive/texlive
+```
 
 ### Local Development
 
-- `texlive-full`
-- `texlive-xetex`
+```bash
+# Install TeX Live
+sudo apt install texlive-full texlive-xetex
+```
 
 ## Usage
 

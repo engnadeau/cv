@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := pdf
+.DEFAULT_GOAL := all
 
 TEX_PATH := tex/cv.tex
 TEX_SOURCES := $(shell find $(dir $(TEX_PATH)) -name '*.tex')
@@ -8,6 +8,13 @@ PDF_PATH := $(OUTPUT_DIR)/nicholas-nadeau_cv.pdf
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # phony targets
+
+.PHONY: all
+all: git pdf
+
+.PHONY: git
+git:
+	git submodule update --init --recursive
 
 .PHONY: pdf
 pdf: $(PDF_PATH)
