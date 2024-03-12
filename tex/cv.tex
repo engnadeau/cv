@@ -4,8 +4,6 @@
 \def\input@path{{tex/}}
 \makeatother
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 \documentclass[11pt, letterpaper]{awesome-cv}
 
 % hyperlinks
@@ -25,23 +23,21 @@
 % dark grey, https://www.color-hex.com/color/414141
 \definecolor{awesome}{HTML}{414141}
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 % awesome cv data
 \name{Nicholas}{Nadeau}
 \address{Montréal, Canada}
 \mobile{+1-514-573-5620}
-\email{nicholas@nadeauinnovations.com}
+\email{nicholas.nadeau@gmail.com}
 
 \position{
+CTO,
 Professional Engineer (P.Eng.),
 Doctor of Philosophy (Ph.D.)
 }
 
 % special links
-\homepage{nadeauinnovations.com}
+\homepage{nicholasnadeau.com}
 \github{EngNadeau}
-\twitter{EngNadeau}
 \googlescholar{Soo4zroAAAAJ&hl}{Nicholas A. Nadeau}
 
 \makecvfooter{\today}{}{\thepage}
@@ -51,12 +47,360 @@ Doctor of Philosophy (Ph.D.)
 \begin{document}
 \makecvheader
 
-\input{sections/work.tex}
-\input{sections/education.tex}
+\cvsection{Work}
+\begin{cventries}
+    \cventry
+    {Founder}
+    {Nadeau Innovations}
+    {Montréal, Canada}
+    {2017 - }
+    {
+        \begin{cvitems}
+            \item{Offered fractional CTO services to advance AI/ML and robotics in startups and growth companies.}
+            \item{Assisted executive teams with strategic planning and roadmaps.}
+            \item{Coached managers and team leads on agile project execution and operations.}
+        \end{cvitems}
+    }
+
+    \cventry
+    {CTO}
+    {Halodi Robotics}
+    {Montréal, Canada \& Oslo, Norway}
+    {2021 - 2023}
+    {
+        \begin{cvitems}
+            \item{Developed a new humanoid robot for security guarding and expanded the team to 50+ employees across 4 countries.}
+            \item{Secured the largest contract ever for humanoid robots with ADT Commercial (140 robots), raised \$10M in Series A funding, and raised \$24M in Series A2 with OpenAI.}
+            \item{Managed software development, architecture design, and internal infrastructure implementation.}
+        \end{cvitems}
+    }
+
+    \cventry
+    {Advisor}
+    {BRIDGR}
+    {Montréal, Canada}
+    {2020 - }
+    {
+        \begin{cvitems}
+            \item{Provided expertise on team growth, architecture, and special projects in robotics and Industry 4.0.}
+            \item{Mentored through the Techstars AI Montréal accelerator.}
+            \item{Facilitated critical introductions for business development.}
+        \end{cvitems}
+    }
+
+    \cventry
+    {Engineering Manager}
+    {AON3D}
+    {Montréal, Canada}
+    {2018 - 2021}
+    {
+        \begin{cvitems}
+            \item{Headed engineering and secured \$11.5M Series A funding for high-performance 3D printing systems.}
+            \item{Directed software and hardware development, product strategy, and certification efforts.}
+            \item{Managed SR\&ED Tax Incentive Program, securing \$300K+ in tax refunds.}
+        \end{cvitems}
+    }
+
+
+    \cventry
+    {Technology Advisor to the CEO}
+    {YPC Technologies}
+    {Montréal, Canada}
+    {2017 - 2018}
+    {
+        \begin{cvitems}
+            \item{Advised CEO during startup accelerator, resulting in \$1.8M seed funding from top investors.}
+            \item{Led engineering team for robotics and software design for FounderFuel Demo Day.}
+            \item{Collaborated on strategy and execution with the CEO.}
+        \end{cvitems}
+    }
+
+    \cventry
+    {R\&D Engineer}
+    {Rogue Research Inc.}
+    {Montréal, Canada}
+    {2011 - 2018}
+    {
+        \begin{cvitems}
+            \item{Developed a novel robotic veterinary neurosurgery system, including algorithms and hardware design.}
+            \item{Created biomedical devices for TMS, NIRS, DBS, and image-based neuronavigation.}
+            \item{Contributed to advancements in computer vision and neuroscience.}
+        \end{cvitems}
+    }
+
+\end{cventries}
+
+\cvsection{Education}
+\begin{cventries}
+
+    \cventry
+    {Ph.D. - Precision and Collaborative Robotics}
+    {École de technologie supérieure}
+    {Montréal, Canada}
+    {2014 - 2019}
+    {
+        \begin{cvitems}
+            \item{Thesis: \href{https://www.nicholasnadeau.com/publication/nadeau-2019-towards/}{Towards the Development of Safe, Collaborative Robotic Freehand Ultrasound}}
+            \item{Development of \href{https://www.nicholasnadeau.com/talk/hardware-in-the-loop-training-robot-contact-in-an-unstructured-environment/}{AI/ML models and algorithms} for physical human-robot interaction, \href{https://www.nicholasnadeau.com/publication/nadeau-2018-evolutionary/}{controller tuning}, and \href{https://www.nicholasnadeau.com/publication/nadeau-2019-impedance/}{robot calibration}.}
+            \item{Creator of \href{https://github.com/EngNadeau/pybotics}{\textit{Pybotics}}, a \href{https://joss.theoj.org/papers/10.21105/joss.01738}{published} open-source Python toolbox for robotics calibration, kinematics, ML/AI, and optimization.}
+        \end{cvitems}
+    }
+
+    \cventry
+    {B.Eng. - Mechanical Engineering, Biomedical Engineering Minor}
+    {McGill University}
+    {Montréal, Canada}
+    {2010 - 2014}
+    {
+        \begin{cvitems}
+        \end{cvitems}
+    }
+
+\end{cventries}
+
 \newpage
-\input{sections/skills.tex}
-\input{sections/publications.tex}
-\input{sections/talks.tex}
-\input{sections/volunteer.tex}
+
+\cvsection{Skills \& Certifications}
+\begin{cvskills}
+
+    \cvskill
+    {Certifications}
+    {
+        Associate Value Specialist (SAVE International),
+        Open Water Diver (PADI),
+        Professional Engineer (Ordre des ingénieurs du Québec)
+    }
+
+    \cvskill
+    {Engineering}
+    {
+        Confluence,
+        GitHub,
+        GitLab,
+        Jira,
+        KiCAD,
+        SOLIDWORKS
+    }
+
+    \cvskill
+    {Software}
+    {
+        Balena,
+        CMake,
+        Docker,
+        Flask,
+        Gradle,
+        gRPC,
+        Linux,
+        Make,
+        PyTorch,
+        REST API,
+        ROS,
+        TensorFlow,
+        Yocto
+    }
+
+    \cvskill
+    {Programming}
+    {
+        C/C++,
+        Java,
+        LaTeX,
+        Node.js,
+        Python
+    }
+
+    \cvskill
+    {Languages}
+    {
+        English,
+        French
+    }
+
+\end{cvskills}
+
+\cvsection{Recent Publications}
+\begin{cvhonors}
+
+    \cvhonor
+    {Improved Test Methods for Polymer AM Inter-Layer Weld Strength and Filament Mechanical Properties}
+    {Richard G. Cole, Kazem Fayazbakhsh, Abraham Avalos, Nicholas A. Nadeau. ASTM International Conference on Additive Manufacturing (ICAM).}
+    {}
+    {2020}
+
+    \cvhonor
+    {Towards the development of safe, collaborative robotic freehand ultrasound}
+    {Nicholas A. Nadeau. École de technologie supérieure.}
+    {}
+    {2019}
+
+    \cvhonor
+    {Pybotics: Python Toolbox for Robotics}
+    {Nicholas A. Nadeau. The Journal of Open Source Software.}
+    {}
+    {2019}
+
+    \cvhonor
+    {Impedance Control Self-Calibration of a Collaborative Robot Using Kinematic Coupling}
+    {Nicholas A. Nadeau, Ilian A. Bonev. MDPI Robotics.}
+    {}
+    {2019}
+
+    \cvhonor
+    {Evolutionary Motion Control Optimization in Physical Human-Robot Interaction}
+    {Nicholas A. Nadeau, Ilian A. Bonev. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).}
+    {}
+    {2018}
+
+    \cvhonor
+    {An Extrinsic Dexterity Approach to the IROS 2018 Fan Robotic Challenge Modality B}
+    {Jennifer Kwiatkowski, Jean-Philippe Roberge, Nicholas A. Nadeau, Louis L'Écuyer-Lapierre, Vincent Duchaine. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).}
+    {}
+    {2018}
+
+    \cvhonor
+    {Characterization of a robotic micro-surgical system for small-animal neurosurgery}
+    {Nicholas A. Nadeau, Alexandru Ciobanu, Fred Lamer, Mathieu Coursolle, Sean McBride, Stephen Frey, Roch Comeau. Society for Neuroscience.}
+    {}
+    {2017}
+
+\end{cvhonors}
+
+\cvsection{Recent Talks}
+\begin{cvhonors}
+
+    \cvhonor
+    {The Applications of Pybotics}
+    {Seattle Robotics Society}
+    {}
+    {2022-10}
+
+    \cvhonor
+    {Applying Key Hardware Design Considerations}
+    {Design to Product Podcast}
+    {}
+    {2022-08}
+
+    \cvhonor
+    {Careers in Robotics}
+    {Dallas ISD STEM Expo}
+    {}
+    {2022-01}
+
+    \cvhonor
+    {Let's talk robotics with Dr. Nicholas Nadeau!}
+    {Let’s Talk Robotics Podcast}
+    {}
+    {2021-10}
+
+    \cvhonor
+    {Safe and Capable Robots}
+    {IEEE-EMBS Robotics Webinar}
+    {}
+    {2021-10}
+
+    \cvhonor
+    {Hiring for Inclusive Robotics}
+    {Silicon Valley Robotics - Society, Robots, and Us}
+    {}
+    {2021-04}
+
+    \cvhonor
+    {Hardware in the Loop: Training Robot Contact in an Unstructured Environment}
+    {Montréal-Python 85}
+    {}
+    {2021-04}
+
+    \cvhonor
+    {Making Materials Matter}
+    {Dyndrite Developer Conference 2020}
+    {}
+    {2020-04}
+
+    \cvhonor
+    {Evolutionary Motion Control Optimization in Physical Human-Robot Interaction}
+    {2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+    {}
+    {2018-10}
+
+    \cvhonor
+    {Calibrating Robots with Python}
+    {PyCon Canada 2017}
+    {}
+    {2017-11}
+
+\end{cvhonors}
+
+\cvsection{Volunteer \& Committees}
+\begin{cvhonors}
+
+    \cvhonor
+    {Startup Mentor}
+    {Next AI}
+    {}
+    {2022}
+
+    \cvhonor
+    {Startup Mentor}
+    {Creative Destruction Lab (CDL)}
+    {}
+    {2022}
+
+    \cvhonor
+    {Technical Committee ISO/TC 299 - Robotics}
+    {Standards Council of Canada Mirror Committee}
+    {}
+    {2021}
+
+    \cvhonor
+    {Mentor}
+    {Techstars Montréal AI Accelerator}
+    {}
+    {2020}
+
+    \cvhonor
+    {Mentor}
+    {FounderFuel Startup Accelerator}
+    {}
+    {2020}
+
+    \cvhonor
+    {Member of Technical Expert Panel \& Mentor}
+    {Code Life Ventilator Challenge for COVID-19}
+    {}
+    {2020}
+
+    \cvhonor
+    {Reviewer}
+    {Sensors, MDPI}
+    {}
+    {2020}
+
+    \cvhonor
+    {Reviewer}
+    {Journal of Applied Mathematical Modelling}
+    {}
+    {2019}
+
+    \cvhonor
+    {Reviewer}
+    {International Journal of Advanced Robotic Systems (IJARS)}
+    {}
+    {2019}
+
+    \cvhonor
+    {Committee F42 on Additive Manufacturing Technologies}
+    {ASTM International}
+    {}
+    {2018}
+
+    \cvhonor
+    {Reviewer}
+    {The Journal of Open Source Software (JOSS)}
+    {}
+    {2018}
+
+\end{cvhonors}
+
 
 \end{document}
