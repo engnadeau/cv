@@ -1,60 +1,68 @@
 % !TEX program = xelatex
 
+% Set the directory for input files, useful for organizing larger projects
 \makeatletter
 \def\input@path{{tex/}}
 \makeatother
 
+% Document class and options
 \documentclass[11pt, letterpaper]{awesome-cv}
 
-% hyperlinks
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,urlcolor=cyan}
+%%% Packages %%%
 
-% multicolumn list
+% Hyperlink setup for interactive PDF elements
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=cyan
+}
+
+% Enables multicolumn layouts, particularly useful in sections like Skills
 \usepackage{multicol}
 
-% list spacing
+% Customizes list spacing. Reducing spacing for compact presentation
 \usepackage{enumitem}
-\setlist{nosep} % list spacing
+\setlist{nosep}
 
+% Customizing document margins
 \geometry{margin=0.5in}
+
+% Setting the directory for font files
 \fontdir[fonts/]
 
-% dark grey, https://www.color-hex.com/color/414141
+% Color definition for theme
+% Dark grey color chosen for a professional look
 \definecolor{awesome}{HTML}{414141}
 
-% awesome cv data
+%%% Personal Information %%%
+% This section contains your personal information
 \name{Nicholas}{Nadeau}
 \address{Montréal, Canada}
 \mobile{+1-514-573-5620}
 \email{nicholas.nadeau@gmail.com}
+\position{CTO, Professional Engineer (P.Eng.), Doctor of Philosophy (Ph.D.)}
 
-\position{
-CTO,
-Professional Engineer (P.Eng.),
-Doctor of Philosophy (Ph.D.)
-}
-
-% special links
+% Social Links
 \homepage{nicholasnadeau.com}
 \github{EngNadeau}
 \googlescholar{Soo4zroAAAAJ&hl}{Nicholas A. Nadeau}
 
+% Footer settings
 \makecvfooter{\today}{}{\thepage}
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+%%% Document Content %%%
 \begin{document}
+
+% Header
 \makecvheader
 
+% Work Experience Section
 \cvsection{Work}
 \begin{cventries}
-    \cventry
-    {Founder}
-    {Nadeau Innovations}
-    {Montréal, Canada}
-    {2017 - }
-    {
+    % Each \cventry has specific details related to a job position
+    % Format: \cventry{job title}{organization}{location}{date range}{job details}
+
+    \cventry{Founder}{Nadeau Innovations}{Montréal, Canada}{2017 - Present}{
         \begin{cvitems}
             \item{Offered fractional CTO services to advance AI/ML and robotics in startups and growth companies.}
             \item{Assisted executive teams with strategic planning and roadmaps.}
@@ -127,12 +135,11 @@ Doctor of Philosophy (Ph.D.)
             \item{Contributed to advancements in computer vision and neuroscience.}
         \end{cvitems}
     }
-
 \end{cventries}
 
+% Education Section
 \cvsection{Education}
 \begin{cventries}
-
     \cventry
     {Ph.D. - Precision and Collaborative Robotics}
     {École de technologie supérieure}
@@ -155,14 +162,11 @@ Doctor of Philosophy (Ph.D.)
         \begin{cvitems}
         \end{cvitems}
     }
-
 \end{cventries}
 
-\newpage
-
+% Skills Section
 \cvsection{Skills \& Certifications}
 \begin{cvskills}
-
     \cvskill
     {Certifications}
     {
@@ -216,12 +220,11 @@ Doctor of Philosophy (Ph.D.)
         English,
         French
     }
-
 \end{cvskills}
 
+% Publications Section
 \cvsection{Recent Publications}
 \begin{cvhonors}
-
     \cvhonor
     {Improved Test Methods for Polymer AM Inter-Layer Weld Strength and Filament Mechanical Properties}
     {Richard G. Cole, Kazem Fayazbakhsh, Abraham Avalos, Nicholas A. Nadeau. ASTM International Conference on Additive Manufacturing (ICAM).}
@@ -263,12 +266,11 @@ Doctor of Philosophy (Ph.D.)
     {Nicholas A. Nadeau, Alexandru Ciobanu, Fred Lamer, Mathieu Coursolle, Sean McBride, Stephen Frey, Roch Comeau. Society for Neuroscience.}
     {}
     {2017}
-
 \end{cvhonors}
 
+% Talks Section
 \cvsection{Recent Talks}
 \begin{cvhonors}
-
     \cvhonor
     {The Applications of Pybotics}
     {Seattle Robotics Society}
@@ -328,12 +330,11 @@ Doctor of Philosophy (Ph.D.)
     {PyCon Canada 2017}
     {}
     {2017-11}
-
 \end{cvhonors}
 
+% Volunteer & Committees Section
 \cvsection{Volunteer \& Committees}
 \begin{cvhonors}
-
     \cvhonor
     {Startup Mentor}
     {Next AI}
@@ -399,8 +400,6 @@ Doctor of Philosophy (Ph.D.)
     {The Journal of Open Source Software (JOSS)}
     {}
     {2018}
-
 \end{cvhonors}
-
 
 \end{document}
