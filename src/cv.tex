@@ -1,38 +1,16 @@
 % !TEX program = xelatex
 
-% Set the directory for input files, useful for organizing larger projects
-\makeatletter
-\def\input@path{{tex/}}
-\makeatother
-
-% Document class and options
+% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, letterpaper]{awesome-cv}
 
-%%% Packages %%%
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Hyperlink setup for interactive PDF elements
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    urlcolor=cyan
-}
+% Color for highlights
+\colorlet{awesome}{awesome-darknight}
 
-% Enables multicolumn layouts, particularly useful in sections like Skills
-\usepackage{multicol}
-
-% Customizes list spacing. Reducing spacing for compact presentation
-\usepackage{enumitem}
-\setlist{nosep}
-
-% Customizing document margins
-\geometry{margin=0.5in}
-
-% Setting the directory for font files
-\fontdir[fonts/]
-
-% Color definition for theme
-% Dark grey color chosen for a professional look
-\definecolor{awesome}{HTML}{414141}
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
 
 %%% Personal Information %%%
 % This section contains your personal information
