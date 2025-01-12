@@ -316,5 +316,9 @@ out/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Ignore aider files
+.aider*
+
 # Ignore output of LaTeX build
 out/
