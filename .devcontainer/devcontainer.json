@@ -1,0 +1,22 @@
+{
+    "image": "texlive/texlive:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop",
+                "aaron-bond.better-comments",
+                "vscodevim.vim",
+                "shardulm94.trailing-spaces",
+                "stkb.rewrap",
+                "ms-vscode.makefile-tools",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "GitHub.copilot"
+            ],
+            "settings": {}
+        }
+    },
+    "name": "LaTeX DevContainer",
+    "postCreateCommand": "tlmgr update --self && tlmgr update --all",
+    "postStartCommand": "tlmgr install xetex"
+}
