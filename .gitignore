@@ -316,3 +316,5 @@ out/
 
 # Built Visual Studio Code Extensions
 *.vsix
+# Ignore output of LaTeX build
+out/
