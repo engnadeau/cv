@@ -39,3 +39,19 @@ sudo apt install texlive-full texlive-xetex
 
 - `master` branch is automatically built, tagged, and deployed by GitHub Actions
 - The PDF is uploaded as an asset to a static site hosted by GitHub Pages
+
+## PDF Generation
+
+To generate the PDF, you can use the provided Makefile. Simply run the following command:
+
+```bash
+make pdf
+```
+
+This will generate the PDF file in the `out` directory.
+
+## Deployment
+
+The generated PDF is automatically deployed to GitHub Pages using GitHub Actions. The deployment process is defined in the `.github/workflows/build.yml` file. The PDF is deployed to the `gh-pages` branch and can be accessed at the following URL:
+
+[**➡️➡️ Get the latest version ⬅️⬅️**](https://engnadeau.github.io/cv/nicholas-nadeau_cv.pdf)

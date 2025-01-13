@@ -21,3 +21,18 @@ jobs:
           name: pdf
           path: out/*.pdf
           retention-days: 5
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: pdf
+      - name: Deploy to Pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: out

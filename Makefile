@@ -36,6 +36,15 @@ docker:
 		texlive/texlive \
 		make
 
+.PHONY: deploy
+deploy:
+	git checkout gh-pages
+	cp $(PDF_PATH) .
+	git add $(notdir $(PDF_PATH))
+	git commit -m "Deploy PDF"
+	git push origin gh-pages
+	git checkout -
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # file targets
 
