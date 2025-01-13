@@ -43,6 +43,6 @@ clean:
 $(PDF_PATH): $(TEX_PATH) $(TEX_SOURCES) $(AWESOME_CV_CLASS)
 	@echo "Generating PDF from $(TEX_PATH)..."
 	mkdir -p $(OUTPUT_DIR)
-	xelatex -output-directory=$(OUTPUT_DIR) $<
+	TEXINPUTS=.:./awesome-cv: xelatex -output-directory=$(OUTPUT_DIR) $<
 	mv $(OUTPUT_DIR)/$(basename $(notdir $(TEX_PATH))).pdf $(PDF_PATH)
 	@echo "PDF moved to final location: $(PDF_PATH)."
