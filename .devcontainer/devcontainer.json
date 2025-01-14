@@ -1,5 +1,4 @@
 {
-    "image": "texlive/texlive:latest",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,7 +15,7 @@
             "settings": {}
         }
     },
+    "image": "texlive/texlive:latest",
     "name": "LaTeX DevContainer",
-    "postCreateCommand": "tlmgr update --self && tlmgr update --all",
-    "postStartCommand": "tlmgr install xetex"
+    "remoteUser": "vscode"
 }
