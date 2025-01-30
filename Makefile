@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := all
 
 # Paths and file definitions
-TEX_PATH := src/cv.tex
+TEX_PATH := cv.tex
 TEX_SOURCES := $(shell find $(dir $(TEX_PATH)) -name '*.tex')
 OUTPUT_DIR := out
 PDF_PATH := $(OUTPUT_DIR)/nicholas-nadeau_cv.pdf
