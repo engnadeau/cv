@@ -1,41 +1,35 @@
-# Nicholas' CV
+<!-- PROJECT SHIELDS -->
+[![Build](https://github.com/engnadeau/cv/actions/workflows/build.yml/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/build.yml)
 
-[**➡️➡️ Get the latest version ⬅️⬅️**](https://engnadeau.github.io/cv/nicholas-nadeau_cv.pdf)
+# Nicholas Nadeau's CV
 
-My personal CV that's automatically generated using the following tech stack:
+[**➡️➡️ Get the latest version of my CV (PDF) ⬅️⬅️**](https://engnadeau.github.io/cv/nicholas-nadeau_cv.pdf)
 
-- LaTeX + XeTeX for document writing and PDF generation
-- GitHub Actions for automated CI/CD
-- Docker for a consistent development environment and CI image
-- GitHub Pages + Jamstack for deployment and hosting
+This repository contains the source code for my CV, automatically built using LaTeX, Docker, and GitHub Actions.
 
-| Item   | Badges                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repo   | ![GitHub repo size](https://img.shields.io/github/repo-size/engnadeau/cv) ![GitHub](https://img.shields.io/github/license/engnadeau/cv) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/engnadeau/cv)                                                                                                                                                                                                                                                                          |
-| CI     | [![Build](https://github.com/engnadeau/cv/actions/workflows/build.yml/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/build.yml) [![Release](https://github.com/engnadeau/cv/actions/workflows/release.yml/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/release.yml) [![pages-build-deployment](https://github.com/engnadeau/cv/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/pages/pages-build-deployment) |
-| Social | ![GitHub followers](https://img.shields.io/github/followers/engnadeau?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/engnadeau?style=social)                                                                                                                                                                                                                                                                                                                                       |
+## Build Instructions
 
-## Requirements
+### Prerequisites
 
-### Docker Development (Recommended)
+* **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
+* **Remote - Containers VS Code Extension:** Install the "Remote - Containers" extension in VS Code.
 
-```bash
-# Run the container
-docker run --rm -it -v $(pwd):/app -w /app --entrypoint /bin/bash texlive/texlive
-```
+### Building the CV
 
-### Local Development
+1. **Open the folder:** Open the `cv` folder in VS Code.
 
-```bash
-# Install TeX Live
-sudo apt install texlive-full texlive-xetex
-```
+2. **Reopen in Container:** Click the green "Reopen in Container" button in the bottom-left corner of VS Code.  This will build and start a Docker container based on the configuration in `.devcontainer/devcontainer.json`.
 
-## Usage
+3. **Build:** Once the container is running, open a terminal and run `make pdf`. The generated PDF will be located in the `out/` directory.
 
-- See the [`Makefile`](./Makefile) for entrypoints
+## Makefile
 
-## Deployments
+The [`Makefile`](./Makefile) provides:
 
-- `master` branch is automatically built, tagged, and deployed by GitHub Actions
-- The PDF is uploaded as an asset to a static site hosted by GitHub Pages
+- `make pdf`: Generates the PDF.
+- `make clean`: Cleans the output directory.
+
+## Deployment
+
+- The `master` branch is automatically built, tagged, and deployed by GitHub Actions.
+- The generated PDF is uploaded as a release asset and deployed to GitHub Pages.
