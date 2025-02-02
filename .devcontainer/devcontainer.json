@@ -1,0 +1,27 @@
+{
+    "name": "LaTeX DevContainer",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop",
+                "aaron-bond.better-comments",
+                "vscodevim.vim",
+                "shardulm94.trailing-spaces",
+                "stkb.rewrap",
+                "ms-vscode.makefile-tools",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "GitHub.copilot",
+                "donjayamanne.githistory",
+                "streetsidesoftware.code-spell-checker",
+                "mhutchie.git-graph",
+                "yzhang.markdown-all-in-one",
+                "DavidAnson.vscode-markdownlint",
+                "Gruntfuggly.todo-tree"
+            ],
+            "settings": {}
+        }
+    },
+    "remoteUser": "vscode"
+}
