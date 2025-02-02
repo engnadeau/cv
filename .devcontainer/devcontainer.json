@@ -1,6 +1,6 @@
 {
     "name": "LaTeX DevContainer",
-    "image": "texlive/texlive:latest",
+    "dockerFile": "Dockerfile",
     "customizations": {
         "vscode": {
             "extensions": [
