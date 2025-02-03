@@ -21,7 +21,7 @@ jobs:
         run: ls -R
       - name: Build site
         run: |
-          mkdir site \
+          mkdir -p site
           cp *.pdf site/
       - name: Set tag name
         id: tag_name
