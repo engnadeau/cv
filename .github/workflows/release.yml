@@ -20,7 +20,9 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
       - name: Build site
-        run: cp *.pdf site/
+        run: |
+          mkdir site \
+          cp *.pdf site/
       - name: Set tag name
         id: tag_name
         run: echo "::set-output name=tag_name::$(date +'%Y.%m.%d.%H.%M.%S')"
