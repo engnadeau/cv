@@ -1,5 +1,6 @@
 <!-- PROJECT SHIELDS -->
 [![Build](https://github.com/engnadeau/cv/actions/workflows/build.yml/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/build.yml)
+[![Release](https://github.com/engnadeau/cv/actions/workflows/release.yml/badge.svg)](https://github.com/engnadeau/cv/actions/workflows/release.yml)
 
 # Nicholas Nadeau's CV
 
