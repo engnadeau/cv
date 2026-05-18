@@ -1,7 +1,3 @@
-# Managed via centralized policy rollout.
-# - monthly cadence to reduce noise
-# - 14d cooldown to mitigate supply-chain attacks (malicious versions yanked within days)
-# Security updates remain immediate.
 version: 2
 updates:
   - package-ecosystem: "docker"
@@ -10,17 +6,9 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 14
-      semver-major-days: 14
-      semver-minor-days: 14
-      semver-patch-days: 14
-    open-pull-requests-limit: 10
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
     cooldown:
       default-days: 14
-      semver-major-days: 14
-      semver-minor-days: 14
-      semver-patch-days: 14
-    open-pull-requests-limit: 10
